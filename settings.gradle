@@ -1,18 +1,21 @@
 pluginManagement {
     repositories {
+        maven {
+            url 'https://maven.aliyun.com/repository/gradle-plugin'
+        }
         gradlePluginPortal()
         google()
         mavenCentral()
     }
 }
-dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-    repositories {
-        mavenLocal()
-        google()
-        mavenCentral()
-    }
-}
+//dependencyResolutionManagement {
+//    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+//    repositories {
+//        mavenLocal()
+//        google()
+//        mavenCentral()
+//    }
+//}
 rootProject.name = "APP"
 include ':app'
 include ':curriculum'

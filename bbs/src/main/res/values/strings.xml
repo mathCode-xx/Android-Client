@@ -1,3 +1,36 @@
 <resources>
     <string name="app_name">bbs</string>
+    <string name="bt_login">登录</string>
+    <string name="et_user_name">请输入用户名</string>
+    <string name="et_password">请输入密码</string>
+    <string name="app_version">1.0.0 beta</string>
+    <string name="iv_app_icon">app_icon</string>
+    <string name="tv_content">内容</string>
+    <string name="tv_user_id">用户名</string>
+    <string name="ib_like">点赞</string>
+    <string name="ib_comment">评论</string>
+    <string name="ib_collection">收藏</string>
+    <string name="tv_like_count">100</string>
+    <string name="tv_comment_count">100</string>
+    <string name="tv_collection_count">100</string>
+    <string name="tv_user_name">徐鑫</string>
+    <string name="tv_uid_detail">201930035227</string>
+    <string name="tv_uid">UID:</string>
+    <string name="tv_focus">关注</string>
+    <string name="tv_focus_count">100</string>
+    <string name="tv_fans">|  粉丝</string>
+    <string name="tv_fans_count">100</string>
+    <string name="tv_my_bbs">我的论坛</string>
+    <string name="ib_my_discuss">我的讨论</string>
+    <string name="ib_my_comment">我的评论</string>
+    <string name="ib_my_collection">我的收藏</string>
+    <string name="tv_my_discuss">我的讨论</string>
+    <string name="tv_my_comment">我的评论</string>
+    <string name="tv_my_collection">我的收藏</string>
+    <string name="ib_personal_enter">个人中心入口</string>
+    <string name="btn_send">评论</string>
+    <string name="et_comment_hint">说点什么吧</string>
+    <string name="cb_remember_password">记住密码</string>
+
+
 </resources>

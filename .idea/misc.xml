@@ -3,6 +3,23 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/Develop/Code/android_project/APP/bbs/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1225" />
+        <entry key="..\:/Develop/Code/android_project/APP/bbs/src/main/res/drawable/ic_baseline_arrow_back_ios_24.xml" value="0.1455" />
+        <entry key="..\:/Develop/Code/android_project/APP/bbs/src/main/res/drawable/ic_baseline_chat_48.xml" value="0.1195" />
+        <entry key="..\:/Develop/Code/android_project/APP/bbs/src/main/res/drawable/ic_baseline_person_36.xml" value="0.1195" />
+        <entry key="..\:/Develop/Code/android_project/APP/bbs/src/main/res/drawable/ic_baseline_textsms_24.xml" value="0.121" />
+        <entry key="..\:/Develop/Code/android_project/APP/bbs/src/main/res/drawable/ic_baseline_thumb_up_alt_12.xml" value="0.1195" />
+        <entry key="..\:/Develop/Code/android_project/APP/bbs/src/main/res/drawable/ic_baseline_thumb_up_alt_24.xml" value="0.143" />
+        <entry key="..\:/Develop/Code/android_project/APP/bbs/src/main/res/drawable/ic_launcher_background.xml" value="0.1455" />
+        <entry key="..\:/Develop/Code/android_project/APP/bbs/src/main/res/layout/activity_bbs_main.xml" value="0.25364583333333335" />
+        <entry key="..\:/Develop/Code/android_project/APP/bbs/src/main/res/layout/activity_brief.xml" value="0.4" />
+        <entry key="..\:/Develop/Code/android_project/APP/bbs/src/main/res/layout/activity_center.xml" value="0.375" />
+        <entry key="..\:/Develop/Code/android_project/APP/bbs/src/main/res/layout/activity_detail.xml" value="0.25364583333333335" />
+        <entry key="..\:/Develop/Code/android_project/APP/bbs/src/main/res/layout/activity_login.xml" value="0.264" />
+        <entry key="..\:/Develop/Code/android_project/APP/bbs/src/main/res/layout/item_brief.xml" value="0.1" />
+        <entry key="..\:/Develop/Code/android_project/APP/curriculum/src/main/res/layout/activity_setting.xml" value="0.1" />
+        <entry key="..\:/Develop/gradle/gradle-7.4/caches/transforms-3/c0f7f77218d883fa6786f48c63e1580b/transformed/material-1.4.0/res/layout/design_bottom_navigation_item.xml" value="0.21014492753623187" />
         <entry key="..\:/project/android_project/APP/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/project/android_project/APP/app/src/main/res/layout/activity_main2.xml" value="0.1" />
         <entry key="..\:/project/android_project/APP/bbs/src/main/res/layout/activity_main.xml" value="0.2" />
