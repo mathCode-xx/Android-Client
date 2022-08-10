@@ -27,6 +27,7 @@
             android:background="@color/white" />
 
         <Button
+            android:id="@+id/accept"
             android:layout_width="47dp"
             android:layout_height="36dp"
             android:background="@color/white"
@@ -44,7 +45,10 @@
             android:background="#dfdfdf" />
 
         <Spinner
-            android:layout_width="100dp"
+            android:id="@+id/spinner"
+            android:layout_width="150dp"
+            android:entries="@array/weeks"
+            android:spinnerMode="dropdown"
             android:layout_height="match_parent" />
 
         <LinearLayout
@@ -53,16 +57,28 @@
             android:orientation="horizontal">
 
             <ImageButton
+                android:id="@+id/ic_back"
                 android:layout_width="0dp"
+                android:background="@drawable/ic_baseline_arrow_back_24"
                 android:layout_height="match_parent"
                 android:layout_weight="1" />
-
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#dfdfdf" />
             <ImageButton
+                android:id="@+id/load"
                 android:layout_width="0dp"
+                android:background="@drawable/ic_baseline_backup_24"
                 android:layout_height="match_parent"
                 android:layout_weight="1" />
-
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#dfdfdf" />
             <ImageButton
+                android:id="@+id/setting"
+                android:background="@drawable/ic_baseline_settings_24"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1" />
@@ -80,75 +96,10 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="637dp"
+        android:layout_height="549dp"
         android:columnCount="8"
         android:orientation="vertical"
         android:rowCount="13">
-       <LinearLayout
-           android:layout_width="match_parent"
-           android:layout_height="0dp"
-           android:layout_weight="1"
-           android:orientation="horizontal">
-           <TextView
-               android:layout_width="0dp"
-               android:gravity="center"
-               android:layout_height="match_parent"
-               android:layout_weight="1"
-               android:text="课程"/>
-
-           <TextView
-               android:layout_width="0dp"
-               android:gravity="center"
-               android:layout_height="match_parent"
-               android:layout_weight="1"
-               android:text="周一"/>
-
-           <TextView
-               android:layout_width="0dp"
-               android:gravity="center"
-               android:layout_height="match_parent"
-               android:layout_weight="1"
-               android:text="周二"/>
-
-           <TextView
-               android:layout_width="0dp"
-               android:gravity="center"
-               android:layout_height="match_parent"
-               android:layout_weight="1"
-               android:text="周三"/>
-
-           <TextView
-               android:layout_width="0dp"
-               android:gravity="center"
-               android:layout_height="match_parent"
-               android:layout_weight="1"
-               android:text="周四"/>
-
-           <TextView
-               android:layout_width="0dp"
-               android:gravity="center"
-               android:layout_height="match_parent"
-               android:layout_weight="1"
-               android:text="周五"/>
-
-           <TextView
-               android:layout_width="0dp"
-               android:gravity="center"
-               android:layout_height="match_parent"
-               android:layout_weight="1"
-               android:text="周六"/>
-
-           <TextView
-               android:layout_width="0dp"
-               android:gravity="center"
-               android:layout_height="match_parent"
-               android:layout_weight="1"
-               android:text="周日"/>
-
-
-
-
-       </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -158,59 +109,59 @@
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="一"/>
+                android:gravity="center"
+                android:text="课程" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center"
+                android:text="周一" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center"
+                android:text="周二" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center"
+                android:text="周三" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center"
+                android:text="周四" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-               />
+                android:gravity="center"
+                android:text="周五" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center"
+                android:text="周六" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-             />
+                android:gravity="center"
+                android:text="周日" />
 
 
         </LinearLayout>
@@ -223,59 +174,53 @@
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="二"/>
+                android:gravity="center"
+                android:text="一" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
+
 
         </LinearLayout>
 
@@ -287,59 +232,52 @@
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="三"/>
+                android:gravity="center"
+                android:text="二" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
         </LinearLayout>
 
@@ -351,59 +289,52 @@
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="四"/>
+                android:gravity="center"
+                android:text="三" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
         </LinearLayout>
 
@@ -415,59 +346,52 @@
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="五"/>
+                android:gravity="center"
+                android:text="四" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
         </LinearLayout>
 
@@ -479,59 +403,52 @@
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="六"/>
+                android:gravity="center"
+                android:text="五" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
         </LinearLayout>
 
@@ -543,59 +460,52 @@
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="七"/>
+                android:gravity="center"
+                android:text="六" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
         </LinearLayout>
 
@@ -607,59 +517,52 @@
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="八"/>
+                android:gravity="center"
+                android:text="七" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
         </LinearLayout>
 
@@ -671,59 +574,52 @@
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="九"/>
+                android:gravity="center"
+                android:text="八" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
         </LinearLayout>
 
@@ -735,59 +631,52 @@
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="十"/>
+                android:gravity="center"
+                android:text="九" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
         </LinearLayout>
 
@@ -799,59 +688,52 @@
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="十一"/>
+                android:gravity="center"
+                android:text="十" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
         </LinearLayout>
 
@@ -863,59 +745,109 @@
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="十二"/>
+                android:gravity="center"
+                android:text="十一" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="十二" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center" />
 
         </LinearLayout>
 
@@ -925,31 +857,33 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="41dp"
-
         android:gravity="bottom"
         android:orientation="horizontal">
 
-        <ImageButton
+        <Button
+            android:id="@+id/first"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
-
-            android:layout_weight="1" />
-
-        <ImageButton
-            android:layout_width="0dp"
-
+            android:text="课程表"
             android:layout_height="match_parent"
             android:layout_weight="1" />
 
-        <ImageButton
+        <Button
+            android:id="@+id/second"
+            android:layout_width="0dp"
+            android:text=""
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
 
+        <Button
+            android:id="@+id/third"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1" />
 
-        <ImageButton
+        <Button
+            android:id="@+id/fourth"
             android:layout_width="0dp"
-
+            android:text="设置"
             android:layout_height="match_parent"
             android:layout_weight="1" />
 
