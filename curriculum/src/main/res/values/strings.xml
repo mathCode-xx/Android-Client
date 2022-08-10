@@ -1,27 +1,12 @@
 <resources>
-    <string name="app_name">My Application</string>
-    <string name="_2022年_">2022年</string>
-    <string name="Monday">周一</string>
-    <string name="Tuesday">周二</string>
-    <string name="Wednesday">周三</string>
-    <string name="Thursday">周四</string>
-    <string name="Friday">周五</string>
-    <string name="Saturday">周六</string>
-    <string name="Sunday">周日</string>
-    <string name="Class">课程</string>
+    <string name="app_name">Curriculum</string>
+    <string name="title_activity_main">MainActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
 
-    <string name="one">一</string>
-    <string name="two">二</string>
-    <string name="three">三</string>
-    <string name="four">四</string>
-    <string name="five">五</string>
-    <string name="six">六</string>
-    <string name="seven">七</string>
-    <string name="eight">八</string>
-    <string name="nine">九</string>
-    <string name="ten">十</string>
-    <string name="eleven">十一</string>
-    <string name="twelve">十二</string>
-
-
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>
