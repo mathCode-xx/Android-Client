@@ -3,7 +3,18 @@
     package="com.scut.curriculum">
 
     <application>
-        <activity android:name=".CurriculumMainActivity"/>
+        <activity
+            android:name=".MainActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity3"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
