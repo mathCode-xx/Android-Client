@@ -10,10 +10,12 @@
         android:orientation="horizontal">
 
         <TextView
+            android:id="@+id/insert"
             android:layout_width="50dp"
             android:layout_height="match_parent"
             android:background="@color/white"
             android:gravity="center"
+            android:clickable="true"
             android:text="2022年" />
 
         <View
@@ -108,9 +110,11 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/delete"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:clickable="true"
                 android:gravity="center"
                 android:text="课程" />
 
@@ -180,42 +184,56 @@
                 android:text="一" />
 
             <TextView
+                android:id="@+id/class_1_1"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_2_1"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_3_1"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_4_1"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_5_1"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_6_1"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_7_1"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -238,42 +256,56 @@
                 android:text="二" />
 
             <TextView
+                android:id="@+id/class_1_2"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_2_2"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_3_2"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_4_2"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_5_2"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_6_2"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_7_2"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -295,42 +327,56 @@
                 android:text="三" />
 
             <TextView
+                android:id="@+id/class_1_3"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_2_3"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_3_3"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_4_3"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_5_3"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_6_3"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_7_3"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -352,42 +398,56 @@
                 android:text="四" />
 
             <TextView
+                android:id="@+id/class_1_4"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_2_4"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_3_4"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_4_4"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_5_4"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_6_4"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_7_4"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -409,42 +469,56 @@
                 android:text="五" />
 
             <TextView
+                android:id="@+id/class_1_5"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_2_5"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_3_5"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_4_5"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_5_5"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_6_5"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_7_5"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -466,42 +540,56 @@
                 android:text="六" />
 
             <TextView
+                android:id="@+id/class_1_6"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_2_6"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_3_6"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_4_6"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_5_6"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_6_6"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_7_6"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -523,42 +611,56 @@
                 android:text="七" />
 
             <TextView
+                android:id="@+id/class_1_7"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_2_7"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_3_7"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_4_7"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_5_7"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_6_7"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_7_7"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -580,42 +682,56 @@
                 android:text="八" />
 
             <TextView
+                android:id="@+id/class_1_8"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_2_8"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_3_8"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_4_8"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_5_8"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_6_8"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_7_8"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -637,42 +753,56 @@
                 android:text="九" />
 
             <TextView
+                android:id="@+id/class_1_9"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_2_9"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_3_9"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_4_9"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_5_9"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_6_9"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_7_9"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -694,42 +824,56 @@
                 android:text="十" />
 
             <TextView
+                android:id="@+id/class_1_10"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_2_10"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_3_10"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_4_10"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_5_10"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_6_10"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_7_10"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -751,42 +895,56 @@
                 android:text="十一" />
 
             <TextView
+                android:id="@+id/class_1_11"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_2_11"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_3_11"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_4_11"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_5_11"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_6_11"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_7_11"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -808,42 +966,56 @@
                 android:text="十二" />
 
             <TextView
+                android:id="@+id/class_1_12"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_2_12"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_3_12"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_4_12"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_5_12"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_6_12"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center" />
 
             <TextView
+                android:id="@+id/class_7_12"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
