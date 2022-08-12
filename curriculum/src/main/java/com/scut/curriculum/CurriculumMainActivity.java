@@ -670,73 +670,73 @@ public class CurriculumMainActivity extends AppCompatActivity {
                 view11.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view11.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view11.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view12.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view12.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view12.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view13.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view13.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view13.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view14.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view14.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view14.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view15.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view15.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view15.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view16.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view16.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view16.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view17.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view17.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view17.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view18.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view18.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view18.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view19.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view19.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view19.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view110.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view110.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view110.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view111.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view111.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view111.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view112.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view112.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view112.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
 
@@ -744,438 +744,438 @@ public class CurriculumMainActivity extends AppCompatActivity {
                 view21.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view21.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view21.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view22.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view22.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view22.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view23.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view23.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view23.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view24.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view24.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view24.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view25.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view25.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view25.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view26.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view26.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view26.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view27.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view27.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view27.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view28.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view28.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view28.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view29.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view29.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view29.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view210.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view210.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view210.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view211.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view211.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view211.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view212.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view212.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view212.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
 
                 view31.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view31.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view31.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view32.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view32.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view32.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view33.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view33.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view33.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view34.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view34.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view34.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view35.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view35.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view35.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view36.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view36.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view36.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view37.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view37.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view37.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view38.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view38.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view38.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view39.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view39.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view39.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view310.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view310.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view310.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view311.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view311.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view311.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view312.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view312.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view312.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
 
                 view41.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view41.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view41.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view42.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view42.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view42.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view43.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view43.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view43.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view44.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view44.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view44.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view45.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view45.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view45.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view46.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view46.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view46.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view47.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view47.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view47.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view48.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view48.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view48.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view49.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view49.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view49.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view410.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view410.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view410.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view411.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view411.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view411.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view412.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view412.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view412.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
 
                 view51.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view51.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view51.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view52.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view52.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view52.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view53.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view53.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view53.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view54.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view54.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view54.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view55.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view55.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view55.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view56.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view56.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view56.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view57.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view57.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view57.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view58.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view58.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view58.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view59.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view59.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view59.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view510.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view510.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view510.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view511.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view511.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view511.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view512.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view512.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view512.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
 
                 view61.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view61.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view61.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view62.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view62.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view62.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view63.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view63.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view63.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view64.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view64.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view64.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view65.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view65.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view65.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view66.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view66.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view66.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view67.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view67.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view67.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view68.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view68.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view68.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view69.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view69.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view69.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view610.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view610.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view610.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view611.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view611.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view611.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view612.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view612.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view612.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
 
                 view71.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view71.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view71.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view72.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view72.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view72.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view73.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view73.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view73.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view74.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view74.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view74.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view75.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view75.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view75.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view76.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view76.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view76.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view77.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view77.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view77.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view78.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view78.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view78.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view79.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view79.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view79.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view710.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view710.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view710.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view711.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view711.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view711.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 view712.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CurriculumMainActivity.this, view712.getText(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CurriculumMainActivity.this, view712.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
 
