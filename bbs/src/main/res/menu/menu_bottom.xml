@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bbsFragment"
+        android:icon="@drawable/ic_baseline_chat_bubble_24"
+        android:title="@string/menu_bbs" />
+    <item
+        android:id="@+id/curriculumFragment"
+        android:icon="@drawable/ic_baseline_menu_book_24"
+        android:title="@string/menu_class" />
+    <item
+        android:id="@+id/mineFragment"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="@string/menu_mine" />
+</menu>

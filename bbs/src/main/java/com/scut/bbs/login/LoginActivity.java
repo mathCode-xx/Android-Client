@@ -18,23 +18,14 @@ import com.scut.bbs.login.vm.LoginViewModel;
  */
 public class LoginActivity extends AppCompatActivity {
 
-    LoginViewModel loginViewModel;
-    ActivityLoginBinding binding;
+    private ActivityLoginBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_login);
-        loginViewModel = new ViewModelProvider(this).get(LoginViewModel.class);
+        binding = ActivityLoginBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
-        binding.setVariable(BR.loginViewModel, loginViewModel);
-        // 这里的参数类型为LifecycleOwner，把自己的生命周期告诉给已绑定对象的布局
-        binding.setLifecycleOwner(this);
-
-        loginViewModel.getSuccess().observe(this, aBoolean -> {
-            if (aBoolean) {
-                finish();
-            }
-        });
+        //binding.fragmentContainerView2.
     }
 }

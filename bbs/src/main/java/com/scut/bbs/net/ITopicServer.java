@@ -22,7 +22,4 @@ public interface ITopicServer {
      */
     @GET("topic/page")
     Single<ResponseData> getTopicByPage(@Query("pageNum") Integer pageNum, @Query("pageSize") Integer pageSize);
-
-
-
 }

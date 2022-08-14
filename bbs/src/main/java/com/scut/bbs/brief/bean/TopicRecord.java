@@ -2,6 +2,7 @@ package com.scut.bbs.brief.bean;
 
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
@@ -23,6 +24,7 @@ public class TopicRecord {
         this.topicId = 0L;
     }
 
+    @Ignore
     public TopicRecord(@NonNull Long topicId, Boolean liked, Boolean collected) {
         this.topicId = topicId;
         this.liked = liked;

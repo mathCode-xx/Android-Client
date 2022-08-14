@@ -7,6 +7,7 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.MutableLiveData;
+import androidx.navigation.NavController;
 
 import com.scut.bbs.brief.BriefActivity;
 import com.scut.bbs.entity.User;

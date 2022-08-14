@@ -3,7 +3,40 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/drawable/ic_baseline_chat_48.xml" value="0.1905" />
+        <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/drawable/ic_baseline_chat_bubble_24.xml" value="0.1905" />
+        <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/drawable/ic_baseline_chat_bubble_stroke.xml" value="0.1335" />
+        <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/drawable/ic_baseline_collections_bookmark_48.xml" value="0.1905" />
+        <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/drawable/ic_baseline_menu_book_24.xml" value="0.1905" />
+        <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/drawable/ic_baseline_menu_book_file.xml" value="0.1335" />
+        <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/drawable/ic_baseline_menu_book_stroke.xml" value="0.1905" />
+        <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.1535" />
+        <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/drawable/ic_baseline_person_36.xml" value="0.1305" />
+        <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/drawable/ic_baseline_person_stroke.xml" value="0.2115" />
+        <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/drawable/ic_baseline_question_answer_48.xml" value="0.2115" />
+        <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/drawable/ic_baseline_thumb_up_24_gray.xml" value="0.1" />
+        <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/drawable/ic_baseline_thumb_up_24_red.xml" value="0.1615" />
+        <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1335" />
+        <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/layout/activity_brief.xml" value="0.1838768115942029" />
+        <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/layout/activity_login.xml" value="0.25364583333333335" />
         <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/layout/activity_test.xml" value="0.20018115942028986" />
+        <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/layout/content_login.xml" value="0.25364583333333335" />
+        <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/layout/fragment_bbs.xml" value="0.21331521739130435" />
+        <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/layout/fragment_detail.xml" value="0.1838768115942029" />
+        <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/layout/fragment_first.xml" value="0.1" />
+        <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/layout/fragment_forget.xml" value="0.20018115942028986" />
+        <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/layout/fragment_login.xml" value="0.20018115942028986" />
+        <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/layout/fragment_mine.xml" value="0.264" />
+        <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/layout/fragment_register.xml" value="0.264" />
+        <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/layout/fragment_second.xml" value="0.25364583333333335" />
+        <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/layout/item_brief.xml" value="0.21331521739130435" />
+        <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/layout/layout_head.xml" value="0.24139492753623187" />
+        <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/layout/layout_icon_bbs.xml" value="0.12335359675785208" />
+        <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/layout/layout_icon_curricul.xml" value="0.12335359675785208" />
+        <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/layout/layout_icon_curriculum.xml" value="0.536" />
+        <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/layout/layout_icon_mine.xml" value="0.8800000000000001" />
+        <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/menu/menu_bottom.xml" value="0.25364583333333335" />
         <entry key="..\:/Develop/Code/android_project/APP/bbs/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1225" />
         <entry key="..\:/Develop/Code/android_project/APP/bbs/src/main/res/drawable/ic_baseline_arrow_back_ios_24.xml" value="0.1455" />
         <entry key="..\:/Develop/Code/android_project/APP/bbs/src/main/res/drawable/ic_baseline_chat_48.xml" value="0.1195" />
@@ -17,7 +50,14 @@
         <entry key="..\:/Develop/Code/android_project/APP/bbs/src/main/res/layout/activity_center.xml" value="0.375" />
         <entry key="..\:/Develop/Code/android_project/APP/bbs/src/main/res/layout/activity_detail.xml" value="0.25364583333333335" />
         <entry key="..\:/Develop/Code/android_project/APP/bbs/src/main/res/layout/activity_login.xml" value="0.264" />
+        <entry key="..\:/Develop/Code/android_project/APP/bbs/src/main/res/layout/fragment_login.xml" value="0.264" />
+        <entry key="..\:/Develop/Code/android_project/APP/bbs/src/main/res/layout/fragment_main.xml" value="0.25364583333333335" />
+        <entry key="..\:/Develop/Code/android_project/APP/bbs/src/main/res/layout/fragment_mine.xml" value="0.21331521739130435" />
+        <entry key="..\:/Develop/Code/android_project/APP/bbs/src/main/res/layout/fragment_register.xml" value="0.23550724637681159" />
         <entry key="..\:/Develop/Code/android_project/APP/bbs/src/main/res/layout/item_brief.xml" value="0.1" />
+        <entry key="..\:/Develop/Code/android_project/APP/bbs/src/main/res/menu/manu_bottom.xml" value="0.4599609375" />
+        <entry key="..\:/Develop/Code/android_project/APP/bbs/src/main/res/menu/menu_bottom.xml" value="0.4599609375" />
+        <entry key="..\:/Develop/Code/android_project/APP/curriculum/src/main/res/layout/activity_curriculum_main.xml" value="0.25364583333333335" />
         <entry key="..\:/Develop/Code/android_project/APP/curriculum/src/main/res/layout/activity_setting.xml" value="0.1" />
         <entry key="..\:/Develop/gradle/gradle-7.4/caches/transforms-3/c0f7f77218d883fa6786f48c63e1580b/transformed/material-1.4.0/res/layout/design_bottom_navigation_item.xml" value="0.21014492753623187" />
         <entry key="..\:/project/android_project/APP/app/src/main/res/layout/activity_main.xml" value="0.1" />

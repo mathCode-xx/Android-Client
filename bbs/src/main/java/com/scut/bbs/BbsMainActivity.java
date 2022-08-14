@@ -1,10 +1,16 @@
 package com.scut.bbs;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
+import androidx.navigation.ui.AppBarConfiguration;
+import androidx.navigation.ui.NavigationUI;
 
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.scut.bbs.databinding.ActivityBbsMainBinding;
 import com.scut.bbs.login.LoginActivity;
 import com.scut.bbs.personal.CenterActivity;
 import com.scut.bbs.util.ToastUtils;
@@ -18,16 +24,13 @@ import cn.hutool.json.JSONUtil;
  */
 public class BbsMainActivity extends AppCompatActivity {
 
+    private ActivityBbsMainBinding binding;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bbs_main);
-
-        findViewById(R.id.btnMain).setOnClickListener(v -> {
-            Intent intent = new Intent(BbsMainActivity.this, LoginActivity.class);
-            startActivity(intent);
-            finish();
-        });
+        binding = ActivityBbsMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
     }
 }

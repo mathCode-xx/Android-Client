@@ -19,7 +19,7 @@ public class MyApplication extends Application {
 
     private static MyApplication instance;
 
-    private Map<String, String> map = new HashMap<>();
+    private final Map<String, String> map = new HashMap<>();
 
     public static MyApplication getInstance() {
         return instance;
