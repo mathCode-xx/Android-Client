@@ -2,7 +2,6 @@ package com.scut.app.login.model;
 
 import android.util.Log;
 
-
 import com.scut.app.MyApplication;
 import com.scut.app.entity.LoginBean;
 import com.scut.app.entity.ResponseData;
@@ -53,15 +52,16 @@ public class LoginModel {
                         Log.d(TAG, "onNext: " + responseData.getMessage());
                         if (responseData.getStatusCode() == ResponseData.SUCCESS_CODE) {
                             saveData(loginBean, responseData, iLoginDataCallback);
+                            iLoginDataCallback.success();
                             return;
                         }
-                        iLoginDataCallback.onLoginState(new LoginMsg(false, responseData.getMessage()));
+                        iLoginDataCallback.fail(responseData.getMessage());
                     }
 
                     @Override
                     public void onError(@NonNull Throwable e) {
                         Log.d(TAG, "onError: " + e.getCause() + "\n" + e.getMessage());
-                        iLoginDataCallback.onLoginState(new LoginMsg(false, e.getMessage()));
+                        iLoginDataCallback.fail(e.getMessage());
                     }
 
                     @Override
@@ -112,39 +112,57 @@ public class LoginModel {
                     @Override
                     public void onError(@NonNull Throwable e) {
                         Log.d(TAG, "onError: " + e.getCause() + "\n" + e.getMessage());
-                        iLoginDataCallback.onLoginState(new LoginMsg(false, "数据库出错"));
+                        iLoginDataCallback.fail("数据库出错");
                     }
                 });
-        iLoginDataCallback.onLoginState(new LoginMsg(true, "登录成功"));
     }
 
     /**
      * 用于回调数据
      */
     public interface ILoginDataCallback {
-        /**
-         * 由用户实现的数据处理
-         *
-         * @param msg 登录是否成功
-         */
-        void onLoginState(LoginMsg msg);
+        void success();
+
+        void fail(String message);
     }
 
-    public static class LoginMsg {
-        private final boolean success;
-        private final String msg;
 
-        public LoginMsg(boolean success, String msg) {
-            this.success = success;
-            this.msg = msg;
-        }
+    public void register(User user, CallBackRegister callBackRegister) {
+        //callBackRegister.success(null);
+        IUserServer retrofit = NetUtils.createRetrofit(IUserServer.class);
+        Observable<ResponseData> observable = retrofit.register(user);
+        observable.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Observer<ResponseData>() {
+                    @Override
+                    public void onSubscribe(@NonNull Disposable d) {
 
-        public boolean isSuccess() {
-            return success;
-        }
+                    }
 
-        public String getMsg() {
-            return msg;
-        }
+                    @Override
+                    public void onNext(@NonNull ResponseData responseData) {
+                        Log.d(TAG, "onNext: " + responseData.getStatusCode());
+                        if (responseData.getStatusCode() != ResponseData.SUCCESS_CODE) {
+                            callBackRegister.fail(responseData.getMessage());
+                            return;
+                        }
+                        callBackRegister.success(responseData);
+                    }
+
+                    @Override
+                    public void onError(@NonNull Throwable e) {
+                        callBackRegister.fail(e.getMessage());
+                    }
+
+                    @Override
+                    public void onComplete() {
+
+                    }
+                });
+    }
+
+    public interface CallBackRegister {
+        void success(ResponseData responseData);
+
+        void fail(String message);
     }
 }

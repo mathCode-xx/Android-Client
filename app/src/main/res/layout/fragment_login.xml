@@ -104,14 +104,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.05" />
+            app:layout_constraintGuide_begin="40dp" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline15"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.2" />
+            app:layout_constraintGuide_begin="140dp" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline19"
@@ -157,21 +157,22 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/guideline19" />
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivLogin"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             android:contentDescription="@string/iv_app_icon"
+            android:background="#56424242"
             android:src="@drawable/app_icon"
             android:visibility="visible"
             app:layout_constraintBottom_toTopOf="@+id/guideline15"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/guideline14"
-            tools:srcCompat="@drawable/app_icon"
-            tools:visibility="visible" />
+            app:layout_constraintVertical_bias="0.0"
+            app:shapeAppearance="@style/circleImageStyle" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline27"

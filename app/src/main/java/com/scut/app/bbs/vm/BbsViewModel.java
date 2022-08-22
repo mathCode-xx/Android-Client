@@ -17,12 +17,7 @@ public class BbsViewModel extends ViewModel {
 
     public LiveData<PagingData<Topic>> getLiveData() {
         Pager<Integer, Topic> pager = new Pager<>(new PagingConfig(20),
-                new Function0<PagingSource<Integer, Topic>>() {
-                    @Override
-                    public PagingSource<Integer, Topic> invoke() {
-                        return new BriefPagingSource(new BbsModel());
-                    }
-                });
+                () -> new BriefPagingSource(new BbsModel()));
         return PagingLiveData.cachedIn(PagingLiveData.getLiveData(pager), this);
     }
 }

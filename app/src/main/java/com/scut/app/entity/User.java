@@ -2,6 +2,9 @@ package com.scut.app.entity;
 
 
 import androidx.annotation.NonNull;
+import androidx.databinding.BaseObservable;
+import androidx.databinding.Bindable;
+import androidx.recyclerview.widget.DiffUtil;
 import androidx.room.Entity;
 import androidx.room.Index;
 import androidx.room.PrimaryKey;
@@ -11,15 +14,21 @@ import androidx.room.PrimaryKey;
  * @author 徐鑫
  */
 @Entity(indices = {@Index("id")})
-public class User {
+public class User extends BaseObservable {
     @PrimaryKey
     @NonNull
+    @Bindable
     public String id;
+    @Bindable
     public String name;
+    @Bindable
     public String password;
+    @Bindable
     public int permission;
     public char sex;
+    @Bindable
     public String college;
+    @Bindable
     public String major;
     public int score;
     public int status;
@@ -58,5 +67,17 @@ public class User {
 
     public User() {
         this.id = "";
+    }
+
+    public static class UserDiff extends DiffUtil.ItemCallback<User> {
+        @Override
+        public boolean areItemsTheSame(@NonNull User oldItem, @NonNull User newItem) {
+            return oldItem.id.equals(newItem.id);
+        }
+
+        @Override
+        public boolean areContentsTheSame(@NonNull User oldItem, @NonNull User newItem) {
+            return oldItem.id.equals(newItem.id);
+        }
     }
 }

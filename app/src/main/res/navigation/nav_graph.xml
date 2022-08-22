@@ -17,6 +17,9 @@
         <action
             android:id="@+id/action_bbsFragment_to_detailFragment"
             app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_bbsFragment_to_releaseTopicFragment"
+            app:destination="@id/releaseTopicFragment" />
     </fragment>
     <fragment
         android:id="@+id/mineFragment"
@@ -28,4 +31,9 @@
         android:name="com.scut.app.bbs.DetailFragment"
         android:label="fragment_detail"
         tools:layout="@layout/fragment_detail" />
+    <fragment
+        android:id="@+id/releaseTopicFragment"
+        android:name="com.scut.app.bbs.ReleaseTopicFragment"
+        android:label="fragment_release_topic"
+        tools:layout="@layout/fragment_release_topic" />
 </navigation>

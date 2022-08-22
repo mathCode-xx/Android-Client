@@ -6,8 +6,11 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.MutableLiveData;
+import androidx.navigation.Navigation;
 
+import com.scut.app.MyApplication;
 import com.scut.app.entity.LoginBean;
+import com.scut.app.entity.ResponseData;
 import com.scut.app.entity.User;
 import com.scut.app.login.model.LoginModel;
 import com.scut.app.room.database.UserDatabase;
@@ -30,9 +33,10 @@ public class LoginViewModel extends AndroidViewModel {
     private MutableLiveData<LoginBean> loginMsg;
 
     private MutableLiveData<Boolean> rememberPassword;
-    private MutableLiveData<Boolean> success;
 
     public LoginModel loginModel;
+
+    private User user = new User();
 
     public LoginViewModel(@NonNull Application application) {
         super(application);
@@ -40,7 +44,7 @@ public class LoginViewModel extends AndroidViewModel {
         initData();
     }
 
-    public void login() {
+    public void login(LoginModel.ILoginDataCallback callback) {
         //将是否记住密码存入配置文件
         SharedPreferenceUtils.getSharedPreference().edit()
                 .putBoolean(SharedPreferenceUtils.REMEMBER_KEY
@@ -62,13 +66,7 @@ public class LoginViewModel extends AndroidViewModel {
             ToastUtils.show("请输入密码");
             return;
         }
-        loginModel.login(loginMsg.getValue(), msg -> {
-            if (msg.isSuccess()) {
-
-                getSuccess().setValue(true);
-            }
-            ToastUtils.show(getApplication(), msg.getMsg());
-        });
+        loginModel.login(loginMsg.getValue(), callback);
     }
 
     /**
@@ -108,6 +106,16 @@ public class LoginViewModel extends AndroidViewModel {
         });
     }
 
+    public void register(LoginModel.CallBackRegister callBackRegister) {
+        if (StrUtil.isEmpty(user.id) || StrUtil.isEmpty(user.college)
+                || StrUtil.isEmpty(user.password) || StrUtil.isEmpty(user.name)
+                || StrUtil.isEmpty(user.major)) {
+            ToastUtils.show("请完善输入");
+            return;
+        }
+        loginModel.register(user, callBackRegister);
+    }
+
     public MutableLiveData<LoginBean> getLoginMsg() {
         if (this.loginMsg == null) {
             this.loginMsg = new MutableLiveData<>(new LoginBean());
@@ -130,14 +138,14 @@ public class LoginViewModel extends AndroidViewModel {
         this.rememberPassword = rememberPassword;
     }
 
-    public MutableLiveData<Boolean> getSuccess() {
-        if (this.success == null) {
-            this.success = new MutableLiveData<>(false);
+    public User getUser() {
+        if (user == null) {
+            user = new User();
         }
-        return success;
+        return user;
     }
 
-    public void setSuccess(MutableLiveData<Boolean> success) {
-        this.success = success;
+    public void setUser(User user) {
+        this.user = user;
     }
 }

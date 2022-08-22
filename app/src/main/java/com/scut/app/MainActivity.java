@@ -1,6 +1,7 @@
 package com.scut.app;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,12 +22,16 @@ import java.util.Map;
 public class MainActivity extends AppCompatActivity {
 
     private final HashMap<Integer, MotionLayout> map = new HashMap<>();
+    ActivityMainBinding binding;
+    public static final int MSG_CODE = 0xff;
+    private boolean hasHidden = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
 
         // 定义组件id与motionLayout的映射，方便调用
         // 如果以后需要添加底部导航组件，只需要在这里加一个映射
@@ -76,5 +81,19 @@ public class MainActivity extends AppCompatActivity {
                 motionLayout.transitionToEnd();
             }
         });
+    }
+
+    public void hiddenBottom() {
+        if (!this.hasHidden) {
+            binding.linearLayout.setVisibility(View.GONE);
+            this.hasHidden = true;
+        }
+    }
+
+    public void showBottom() {
+        if (this.hasHidden) {
+            binding.linearLayout.setVisibility(View.VISIBLE);
+            this.hasHidden = false;
+        }
     }
 }
