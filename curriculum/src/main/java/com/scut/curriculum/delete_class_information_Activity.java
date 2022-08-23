@@ -13,6 +13,8 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import java.util.Objects;
+
 public class delete_class_information_Activity extends AppCompatActivity {
     private ImageButton findDevices;
     private SQLiteDatabase dbHelper;
@@ -27,16 +29,45 @@ public class delete_class_information_Activity extends AppCompatActivity {
         EditText Week_of_class_time = (EditText) findViewById(R.id.Week_of_class_time);
         EditText class_day = (EditText) findViewById(R.id.class_day);
         EditText lecture_time = (EditText) findViewById(R.id.lecture_time);
+        EditText class_name = (EditText) findViewById(R.id.class_name);
 
 
-
-        Button search = findViewById(R.id.search);
-        search.setOnClickListener(new View.OnClickListener() {
+        Button search_1 = findViewById(R.id.search_1);
+        search_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                String class_name_1 = class_name.getText().toString();
+
+
+                SQLiteDatabase db = dbHelper;
+                //查询所有的数据
+                Cursor cursor = db.query("Schedule", null, null, null, null, null, null);
+                if (cursor.moveToFirst()) {
+                    do {
+
+                        @SuppressLint("Range") String classname = cursor.getString(cursor.getColumnIndex("class_name"));
+
+
+                        if (Objects.equals(classname, class_name_1)) {
+                            Toast.makeText(delete_class_information_Activity.this, "有该课程", Toast.LENGTH_SHORT).show();
+                        }
+                    } while (cursor.moveToNext());
+
+                }
+            }
+        });
+
+
+        Button search_2 = findViewById(R.id.search_2);
+        search_2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
                 String Week_of_class_time_1 = Week_of_class_time.getText().toString();
                 String class_day_1 = class_day.getText().toString();
                 String lecture_time_1 = lecture_time.getText().toString();
+                String class_name_1 = class_name.getText().toString();
 
                 int Week_of_class_time_2 = Integer.parseInt(Week_of_class_time_1);
                 int class_day_2 = Integer.parseInt(class_day_1);
@@ -61,12 +92,11 @@ public class delete_class_information_Activity extends AppCompatActivity {
                     } while (cursor.moveToNext());
 
                 }
-                Toast.makeText(delete_class_information_Activity.this, "若仅出现此弹窗说明该时段无课程，不可进行课程信息的删除，若有两次弹窗出现则可删除该时段的课程信息", Toast.LENGTH_SHORT).show();
             }
         });
 
-        Button add_information = findViewById(R.id.delete_information);
-        add_information.setOnClickListener(new View.OnClickListener() {
+        Button delete_information_2 = findViewById(R.id.delete_information_2);
+        delete_information_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -83,6 +113,26 @@ public class delete_class_information_Activity extends AppCompatActivity {
                 Toast.makeText(delete_class_information_Activity.this, "成功删除课程信息!", Toast.LENGTH_SHORT).show();
             }
         });
+
+
+        Button delete_information_1 = findViewById(R.id.delete_information_1);
+        delete_information_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                String class_name_1 = class_name.getText().toString();
+
+                SQLiteDatabase db = dbHelper;
+                ContentValues values = new ContentValues();
+
+
+                db.delete("Schedule", "class_name = ?",new String[] {class_name_1});
+                values.clear();
+                Toast.makeText(delete_class_information_Activity.this, "成功删除课程信息!", Toast.LENGTH_SHORT).show();
+            }
+        });
+
 
 
         //下面是返回按钮
