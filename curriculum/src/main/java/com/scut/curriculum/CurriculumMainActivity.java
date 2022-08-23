@@ -39,7 +39,7 @@ public class CurriculumMainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_curriculum_main);
 
         // 下面是数据库的操作，但是一旦建立好数据库之后就不用建立了，只需要插入数据就行
-        dbHelper = new MyDatabaseHelper(this, "Schedule.db", null, 5);
+        dbHelper = new MyDatabaseHelper(this, "Schedule.db", null, 7);
         ImageButton createDatabase = (ImageButton) findViewById(R.id.load);
         //通过点击事件得到一个类
         createDatabase.setOnClickListener(new View.OnClickListener() {
@@ -55,6 +55,8 @@ public class CurriculumMainActivity extends AppCompatActivity {
         addData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
                 SQLiteDatabase db = dbHelper.getWritableDatabase();
                 ContentValues values = new ContentValues();
                 //开始组装数据，我做一个示范
@@ -67,6 +69,31 @@ public class CurriculumMainActivity extends AppCompatActivity {
                 values.put("lecture_time", 12);
                 db.insert("Schedule", null, values);
                 values.clear();
+
+                for (int i = 1; i <= 16; i++) {
+                    for (int j = 1; j <= 2; j++) {
+                        values.put("class_name", "复变函数");
+                        values.put("credit", 4);
+                        values.put("classroom", "博学楼412");
+                        values.put("teacher", "武文");
+                        values.put("Week_of_class_time", i);
+                        values.put("class_day", 1);
+                        values.put("lecture_time", j);
+                        db.insert("Schedule", null, values);
+                        values.clear();
+                    }
+                    for (int j = 3; j <= 4; j++) {
+                        values.put("class_name", "复变函数");
+                        values.put("credit", 4);
+                        values.put("classroom", "博学楼412");
+                        values.put("teacher", "武文");
+                        values.put("Week_of_class_time", i);
+                        values.put("class_day", 4);
+                        values.put("lecture_time", j);
+                        db.insert("Schedule", null, values);
+                        values.clear();
+                    }
+                }
 
 
                 for (int i = 1; i <= 16; i++) {
@@ -132,6 +159,16 @@ public class CurriculumMainActivity extends AppCompatActivity {
                 }
 
 
+            }
+        });
+
+        //下面写增删改页面的转移按钮
+        ImageButton imageButton = (ImageButton) findViewById(R.id.setting);
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CurriculumMainActivity.this, ChangeActivity.class);
+                startActivity(intent);
             }
         });
 

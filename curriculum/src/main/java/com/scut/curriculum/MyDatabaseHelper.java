@@ -10,14 +10,14 @@ import androidx.annotation.Nullable;
 public class MyDatabaseHelper extends SQLiteOpenHelper {
     //只需要一张表即可
     public static final String CREATE_SCHEDULE = "create table Schedule (" +
-            "id integer primary key autoincrement, " +
             "class_name text, " +
             "credit float, " +
             "classroom text, " +
             "teacher text, " +
             "Week_of_class_time integer, " +
             "class_day integer, " +
-            "lecture_time integer)";
+            "lecture_time integer, " +
+            "primary key (Week_of_class_time,class_day,lecture_time))";
     private Context mContext;
 
     public MyDatabaseHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {

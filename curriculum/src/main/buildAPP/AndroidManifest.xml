@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.APP">
         <activity
+            android:name=".change_class_information_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".delete_class_information_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".add_class_information_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ChangeActivity"
+            android:exported="false" />
+        <activity
             android:name=".Setting"
             android:exported="false" />
         <activity
