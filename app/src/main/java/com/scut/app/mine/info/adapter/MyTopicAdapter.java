@@ -1,6 +1,5 @@
 package com.scut.app.mine.info.adapter;
 
-import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,11 +9,8 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.scut.app.MyApplication;
 import com.scut.app.R;
 import com.scut.app.bbs.bean.Topic;
 import com.scut.app.entity.ResponseData;
@@ -57,48 +53,37 @@ public class MyTopicAdapter extends RecyclerView.Adapter<MyTopicAdapter.MyTopicV
         }
         if (deleteModel) {
             holder.btnDelete.setVisibility(View.VISIBLE);
-            holder.btnDelete.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    //ProgressDialog dialog = ProgressDialog.show(MyApplication.getInstance(), "提示", "正在删除...");
-                    dialog.show();
-                    //dialog.
-                    mViewModel.deleteTopic(topic, new CallBack() {
-                        @Override
-                        public void success(ResponseData responseData) {
-                            topicList.remove(topic);
-                            notifyDataSetChanged();
-                            if (dialog.isShowing()) {
-                                dialog.dismiss();
-                            }
-                            ToastUtils.show(responseData.getMessage());
+            holder.btnDelete.setOnClickListener(v -> {
+                dialog.show();
+                mViewModel.deleteTopic(topic, new CallBack() {
+                    @Override
+                    public void success(ResponseData responseData) {
+                        topicList.remove(topic);
+                        notifyDataSetChanged();
+                        if (dialog.isShowing()) {
+                            dialog.dismiss();
                         }
+                        ToastUtils.show(responseData.getMessage());
+                    }
 
-                        @Override
-                        public void fail(String message) {
-                            if (dialog.isShowing()) {
-                                dialog.dismiss();
-                            }
-                            ToastUtils.show(message);
+                    @Override
+                    public void fail(String message) {
+                        if (dialog.isShowing()) {
+                            dialog.dismiss();
                         }
-                    });
-                }
+                        ToastUtils.show(message);
+                    }
+                });
             });
-            holder.itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    deleteModel = false;
-                    notifyDataSetChanged();
-                }
+            holder.itemView.setOnClickListener(v -> {
+                deleteModel = false;
+                notifyDataSetChanged();
             });
         } else {
-            holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
-                @Override
-                public boolean onLongClick(View v) {
-                    deleteModel = true;
-                    notifyDataSetChanged();
-                    return true;
-                }
+            holder.itemView.setOnLongClickListener(v -> {
+                deleteModel = true;
+                notifyDataSetChanged();
+                return true;
             });
             holder.btnDelete.setVisibility(View.GONE);
         }

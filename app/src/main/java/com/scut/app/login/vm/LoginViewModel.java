@@ -6,11 +6,8 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.MutableLiveData;
-import androidx.navigation.Navigation;
 
-import com.scut.app.MyApplication;
 import com.scut.app.entity.LoginBean;
-import com.scut.app.entity.ResponseData;
 import com.scut.app.entity.User;
 import com.scut.app.login.model.LoginModel;
 import com.scut.app.room.database.UserDatabase;

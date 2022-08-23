@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
 
     private final HashMap<Integer, MotionLayout> map = new HashMap<>();
     ActivityMainBinding binding;
-    public static final int MSG_CODE = 0xff;
     private boolean hasHidden = false;
 
     @Override

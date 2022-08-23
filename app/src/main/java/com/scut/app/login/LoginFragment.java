@@ -69,12 +69,8 @@ public class LoginFragment extends Fragment {
         }));
 
         // 跳转到注册页面
-        binding.tvRegister.setOnClickListener(v -> {
-            Navigation.findNavController(v).navigate(R.id.action_loginFragment_to_registerFragment);
-        });
+        binding.tvRegister.setOnClickListener(v -> Navigation.findNavController(v).navigate(R.id.action_loginFragment_to_registerFragment));
         // 跳转到找回密码页面
-        binding.tvForget.setOnClickListener(v -> {
-            Navigation.findNavController(v).navigate(R.id.action_loginFragment_to_forgetFragment);
-        });
+        binding.tvForget.setOnClickListener(v -> Navigation.findNavController(v).navigate(R.id.action_loginFragment_to_forgetFragment));
     }
 }

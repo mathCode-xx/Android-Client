@@ -21,26 +21,21 @@ import retrofit2.http.PUT;
  */
 public interface IUserServer {
 
-    /**
-     * 登录接口
-     *
-     * @param loginBean 登录学号、密码
-     * @return 异步操作对象
-     */
     @POST("user/login")
     Observable<ResponseData> login(@Body LoginBean loginBean);
 
-    /**
-     * 注册
-     * @param user
-     * @return
-     */
     @POST("user/register")
     Observable<ResponseData> register(@Body User user);
 
-    @GET("user/audit")
+    @GET("user/audit/need")
     Single<ResponseData> getNeedAudit(@Header("token") String token);
 
-    @PUT("user/audit/success")
+    @PUT("user/audit/commit")
     Single<ResponseData> commitAudit(@Body List<String> ids, @Header("token") String token);
+
+    @GET("user/audit/finish")
+    Single<ResponseData> getFinishAudit(@Header("token") String token);
+
+    @PUT("user/audit/rollback")
+    Single<ResponseData> rollbackAudit(@Body List<String> ids, @Header("token") String token);
 }

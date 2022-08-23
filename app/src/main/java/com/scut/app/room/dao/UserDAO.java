@@ -28,7 +28,7 @@ public interface UserDAO {
      * @return 异步调用
      */
     @Insert
-    public Completable insert(User user);
+    Completable insert(User user);
 
     /**
      * 插入集合
@@ -37,7 +37,7 @@ public interface UserDAO {
      * @return 受影响的行数
      */
     @Insert
-    public Completable insertList(List<User> users);
+    Completable insertList(List<User> users);
 
     /**
      * 依据主键更新数据
@@ -46,7 +46,7 @@ public interface UserDAO {
      * @return 受影响的行数
      */
     @Update
-    public Single<Integer> update(User user);
+    Single<Integer> update(User user);
 
     /**
      * 根据主键删除数据
@@ -55,7 +55,7 @@ public interface UserDAO {
      * @return 受影响的行数
      */
     @Delete
-    public Single<Integer> delete(User user);
+    Single<Integer> delete(User user);
 
     /**
      * 根据id查找用户信息
@@ -64,7 +64,7 @@ public interface UserDAO {
      * @return 查找到的用户
      */
     @Query("select * from user where id = :id")
-    public Single<User> selectById(String id);
+    Single<User> selectById(String id);
 
     /**
      * 读取一个数据
@@ -72,12 +72,13 @@ public interface UserDAO {
      * @return 读取到的数据
      */
     @Query("select * from user limit 1")
-    public Single<User> selectOne();
+    Single<User> selectOne();
 
     /**
      * 查询所有用户信息
+     *
      * @return 查询到的数据
      */
     @Query("select * from user")
-    public Single<List<User>> selectAll();
+    Single<List<User>> selectAll();
 }

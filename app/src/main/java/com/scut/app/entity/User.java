@@ -4,7 +4,6 @@ package com.scut.app.entity;
 import androidx.annotation.NonNull;
 import androidx.databinding.BaseObservable;
 import androidx.databinding.Bindable;
-import androidx.recyclerview.widget.DiffUtil;
 import androidx.room.Entity;
 import androidx.room.Index;
 import androidx.room.PrimaryKey;
@@ -67,17 +66,5 @@ public class User extends BaseObservable {
 
     public User() {
         this.id = "";
-    }
-
-    public static class UserDiff extends DiffUtil.ItemCallback<User> {
-        @Override
-        public boolean areItemsTheSame(@NonNull User oldItem, @NonNull User newItem) {
-            return oldItem.id.equals(newItem.id);
-        }
-
-        @Override
-        public boolean areContentsTheSame(@NonNull User oldItem, @NonNull User newItem) {
-            return oldItem.id.equals(newItem.id);
-        }
     }
 }

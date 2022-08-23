@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.scut.app.LoginActivity;
@@ -36,7 +37,6 @@ public class DetailFragment extends Fragment {
     private ActivityResultLauncher<Void> launcher;
 
     public DetailFragment() {
-        // Required empty public constructor
     }
 
     public static DetailFragment newInstance() {
@@ -49,7 +49,15 @@ public class DetailFragment extends Fragment {
         if (getArguments() != null) {
             topicId = getArguments().getLong("topic");
         }
-        launcher = registerForActivityResult(new LoginActivity.LoginActivityResultContract(), ToastUtils::show);
+        launcher = registerForActivityResult(new LoginActivity.LoginActivityResultContract(), result -> {
+            switch (result) {
+                case LoginActivity.LOGIN_SUCCESS:
+                case LoginActivity.REGISTER_SUCCESS:
+                    loadAfterLogin();
+                    break;
+                default:
+            }
+        });
         mViewModel = new ViewModelProvider(this).get(TopicViewModel.class);
     }
 
@@ -64,16 +72,52 @@ public class DetailFragment extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        init();
 
+        if (MyApplication.getInstance().haveLogin()) {
+            loadAfterLogin();
+        }
+    }
+
+    /**
+     * 登录之后的加载
+     */
+    private void loadAfterLogin() {
+        binding.etComment.setVisibility(View.VISIBLE);
+        binding.btnComment.setText("回复");
+        binding.btnComment.setOnClickListener(v -> mViewModel.comment(new CallBack() {
+            @Override
+            public void success(ResponseData responseData) {
+                ToastUtils.show(responseData.getMessage());
+                binding.etComment.setText("");
+            }
+
+            @Override
+            public void fail(String message) {
+                ToastUtils.show(message);
+            }
+        }));
+    }
+
+    /**
+     * 初始化页面（未登录状态）
+     */
+    private void init() {
+        //显示弹窗
         ProgressDialog dialog = new ProgressDialog(requireContext());
         dialog.setTitle("正在加载...");
         dialog.show();
 
+        //设置返回按钮的监听事件
+        binding.ivBcak.setOnClickListener(v -> Navigation.findNavController(v).popBackStack());
+
+        //初始化RecycleView
         binding.rvComment.setAdapter(adapter);
         binding.rvComment.setLayoutManager(new LinearLayoutManager(getContext()));
 
         mViewModel.getCommentList().observe(getViewLifecycleOwner(), adapter::submitList);
 
+        //请求数据
         mViewModel.requestTopic(this.topicId);
         mViewModel.requireComment(this.topicId);
 
@@ -94,26 +138,9 @@ public class DetailFragment extends Fragment {
             }
         });
 
-        binding.btnComment.setOnClickListener(v -> {
-            if (!MyApplication.getInstance().haveLogin()) {
-                ToastUtils.show("请先登录！");
-                launcher.launch(null);
-                return;
-            }
-
-            mViewModel.comment(new CallBack() {
-                @Override
-                public void success(ResponseData responseData) {
-                    ToastUtils.show(responseData.getMessage());
-                    binding.etComment.setText("");
-                }
-
-                @Override
-                public void fail(String message) {
-                    ToastUtils.show(message);
-                }
-            });
-        });
-
+        //隐藏评论功能，显示一个登录按钮
+        binding.btnComment.setText("登录");
+        binding.etComment.setVisibility(View.GONE);
+        binding.btnComment.setOnClickListener(v -> launcher.launch(null));
     }
 }

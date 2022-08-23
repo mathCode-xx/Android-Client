@@ -1,18 +1,15 @@
 package com.scut.app.mine.manager;
 
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import android.content.Context;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-
-import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
-import com.scut.app.R;
 import com.scut.app.databinding.ActivityManagerBinding;
 import com.scut.app.mine.manager.fragment.AuditFragment;
 import com.scut.app.mine.manager.fragment.FinishFragment;

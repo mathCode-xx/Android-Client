@@ -1,8 +1,5 @@
 package com.scut.app.net;
 
-import android.telecom.Call;
-import android.util.Log;
-
 import com.scut.app.MyApplication;
 import com.scut.app.entity.ResponseData;
 import com.scut.app.util.NetUtils;
@@ -57,7 +54,59 @@ public class UserServer {
 
                     @Override
                     public void onSuccess(@NonNull ResponseData responseData) {
-                        if (responseData.getStatusCode() == ResponseData.SUCCESS_CODE){
+                        if (responseData.getStatusCode() == ResponseData.SUCCESS_CODE) {
+                            callBack.success(responseData);
+                            return;
+                        }
+                        callBack.fail(responseData.getMessage());
+                    }
+
+                    @Override
+                    public void onError(@NonNull Throwable e) {
+                        callBack.fail(e.getMessage());
+                    }
+                });
+    }
+
+    public void getFinishAudit(CallBack callBack) {
+        Single<ResponseData> single = retrofit.getFinishAudit(MyApplication.getInstance().getStr(MyApplication.TOKEN_KEY));
+        single.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new SingleObserver<ResponseData>() {
+                    @Override
+                    public void onSubscribe(@NonNull Disposable d) {
+
+                    }
+
+                    @Override
+                    public void onSuccess(@NonNull ResponseData responseData) {
+                        if (responseData.getStatusCode() == ResponseData.SUCCESS_CODE) {
+                            callBack.success(responseData);
+                            return;
+                        }
+                        callBack.fail(responseData.getMessage());
+                    }
+
+                    @Override
+                    public void onError(@NonNull Throwable e) {
+                        callBack.fail(e.getMessage());
+                    }
+                });
+    }
+
+    public void commitRollback(List<String> ids, CallBack callBack) {
+        String token = MyApplication.getInstance().getStr(MyApplication.TOKEN_KEY);
+        Single<ResponseData> single = retrofit.rollbackAudit(ids, token);
+
+        single.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new SingleObserver<ResponseData>() {
+                    @Override
+                    public void onSubscribe(@NonNull Disposable d) {
+
+                    }
+
+                    @Override
+                    public void onSuccess(@NonNull ResponseData responseData) {
+                        if (responseData.getStatusCode() == ResponseData.SUCCESS_CODE) {
                             callBack.success(responseData);
                             return;
                         }

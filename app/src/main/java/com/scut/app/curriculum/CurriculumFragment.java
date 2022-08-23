@@ -10,8 +10,8 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.scut.app.databinding.FragmentCurriculumBinding;
 import com.scut.app.curriculum.vm.CurriculumViewModel;
+import com.scut.app.databinding.FragmentCurriculumBinding;
 
 /**
  * 课表界面

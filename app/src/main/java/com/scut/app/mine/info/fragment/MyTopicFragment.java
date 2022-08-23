@@ -9,17 +9,12 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import com.scut.app.bbs.bean.Topic;
 import com.scut.app.databinding.FragmentMyTopicBinding;
 import com.scut.app.mine.info.adapter.MyTopicAdapter;
 import com.scut.app.mine.info.vm.MyBbsViewModel;
-
-import java.util.List;
 
 /**
  * 我的主贴
@@ -30,8 +25,6 @@ public class MyTopicFragment extends Fragment {
     private static final String TAG = "MyTopicFragment";
 
     FragmentMyTopicBinding binding;
-    private ItemTouchHelper.Callback callback;
-    private ItemTouchHelper mItemTouchHelper;
 
     public MyTopicFragment() {
         // Required empty public constructor
@@ -59,12 +52,9 @@ public class MyTopicFragment extends Fragment {
         MyBbsViewModel mViewModel = new ViewModelProvider(this).get(MyBbsViewModel.class);
         MyTopicAdapter adapter = new MyTopicAdapter(mViewModel);
         mViewModel.requireMyTopic();
-        mViewModel.getMyTopics().observe(getViewLifecycleOwner(), new Observer<List<Topic>>() {
-            @Override
-            public void onChanged(List<Topic> topics) {
-                adapter.setTopicList(topics);
-                binding.rcMyTopic.setAdapter(adapter);
-            }
+        mViewModel.getMyTopics().observe(getViewLifecycleOwner(), topics -> {
+            adapter.setTopicList(topics);
+            binding.rcMyTopic.setAdapter(adapter);
         });
 
         binding.rcMyTopic.setAdapter(adapter);

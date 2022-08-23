@@ -1,7 +1,5 @@
 package com.scut.app.bbs.vm;
 
-import android.util.Log;
-
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
@@ -25,8 +23,6 @@ import cn.hutool.json.JSONUtil;
  * @author 徐鑫
  */
 public class TopicViewModel extends ViewModel {
-
-    private static final String TAG = "TopicViewModel";
 
     /**
      * 评论列表
@@ -56,11 +52,6 @@ public class TopicViewModel extends ViewModel {
         });
     }
 
-    /**
-     * 请求评论数据
-     *
-     * @param topicId
-     */
     public void requireComment(Long topicId) {
         model.requestComment(topicId, new CallBack() {
             @Override

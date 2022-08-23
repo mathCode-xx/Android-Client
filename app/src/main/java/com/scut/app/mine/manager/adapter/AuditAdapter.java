@@ -28,10 +28,10 @@ public class AuditAdapter extends RecyclerView.Adapter<AuditAdapter.AuditViewHol
     /**
      * 用来记录选择的复选框
      */
-    private List<Boolean> auditFinishList;
+    private List<Boolean> selectedUser;
     private List<User> userList;
     private final List<String> commitUserId = new ArrayList<>();
-    private LongClickListener listener;
+    private final LongClickListener listener;
 
     public AuditAdapter(LongClickListener listener) {
         this.listener = listener;
@@ -56,8 +56,8 @@ public class AuditAdapter extends RecyclerView.Adapter<AuditAdapter.AuditViewHol
             //当处于审核模式时，点击item可以对复选框进行操作
             holder.itemView.setOnClickListener(v -> holder.cbAudit.callOnClick());
 
-            holder.cbAudit.setChecked(auditFinishList.get(index));
-            holder.cbAudit.setOnClickListener(v -> auditFinishList.set(index, holder.cbAudit.isChecked()));
+            holder.cbAudit.setChecked(selectedUser.get(index));
+            holder.cbAudit.setOnClickListener(v -> selectedUser.set(index, holder.cbAudit.isChecked()));
         } else {
             holder.cbAudit.setVisibility(View.GONE);
         }
@@ -78,14 +78,14 @@ public class AuditAdapter extends RecyclerView.Adapter<AuditAdapter.AuditViewHol
     }
 
     public void deleteItem() {
-        if (userList == null || auditFinishList == null) {
+        if (userList == null || selectedUser == null) {
             return;
         }
-        for (int i = 0; i < auditFinishList.size(); i++) {
-            if (auditFinishList.get(i)) {
-                Log.d(TAG, "deleteItem: ");
+        for (int i = 0; i < selectedUser.size(); i++) {
+            if (selectedUser.get(i)) {
+                Log.d(TAG, "deleteItem: " + i);
                 userList.remove(i);
-                auditFinishList.remove(i);
+                selectedUser.remove(i);
                 notifyItemRemoved(i);
                 i--;
             }
@@ -96,8 +96,15 @@ public class AuditAdapter extends RecyclerView.Adapter<AuditAdapter.AuditViewHol
     }
 
     public void selectAll() {
-        for (int i = 0; i < auditFinishList.size(); i++) {
-            auditFinishList.set(i, true);
+        for (int i = 0; i < selectedUser.size(); i++) {
+            selectedUser.set(i, true);
+        }
+        notifyDataSetChanged();
+    }
+
+    public void cancelSelect() {
+        for (int i = 0; i < selectedUser.size(); i++) {
+            selectedUser.set(i, false);
         }
         notifyDataSetChanged();
     }
@@ -105,18 +112,18 @@ public class AuditAdapter extends RecyclerView.Adapter<AuditAdapter.AuditViewHol
     public void setUserList(List<User> userList) {
         Log.d(TAG, "setUserList: ");
         this.userList = userList;
-        if (this.auditFinishList == null) {
-            this.auditFinishList = new ArrayList<>(userList.size());
+        if (this.selectedUser == null) {
+            this.selectedUser = new ArrayList<>(userList.size());
         }
         for (int i = 0; i < userList.size(); i++) {
-            this.auditFinishList.add(false);
+            this.selectedUser.add(false);
         }
         auditModel = false;
     }
 
     public List<String> getCommitUserId() {
         for (int i = 0; i < getItemCount(); i++) {
-            if (auditFinishList.get(i)) {
+            if (selectedUser.get(i)) {
                 Log.d(TAG, "getCommitUserId: " + userList.get(i).id);
                 commitUserId.add(userList.get(i).id);
             }

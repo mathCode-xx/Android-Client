@@ -128,7 +128,6 @@ public class LoginModel {
 
 
     public void register(User user, CallBackRegister callBackRegister) {
-        //callBackRegister.success(null);
         IUserServer retrofit = NetUtils.createRetrofit(IUserServer.class);
         Observable<ResponseData> observable = retrofit.register(user);
         observable.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())

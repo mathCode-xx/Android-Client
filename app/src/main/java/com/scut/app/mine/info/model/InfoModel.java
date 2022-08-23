@@ -6,7 +6,6 @@ import com.scut.app.MyApplication;
 import com.scut.app.bbs.bean.Topic;
 import com.scut.app.entity.ResponseData;
 import com.scut.app.entity.User;
-import com.scut.app.mine.info.vm.MyBbsViewModel;
 import com.scut.app.net.CallBack;
 import com.scut.app.net.ITopicServer;
 import com.scut.app.util.NetUtils;

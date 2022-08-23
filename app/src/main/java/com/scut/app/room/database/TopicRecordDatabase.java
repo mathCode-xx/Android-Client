@@ -6,7 +6,6 @@ import androidx.room.RoomDatabase;
 
 import com.scut.app.MyApplication;
 import com.scut.app.entity.TopicRecord;
-import com.scut.app.room.dao.TopicRecordDAO;
 
 /**
  * topic record 数据库管理
@@ -24,11 +23,4 @@ public abstract class TopicRecordDatabase extends RoomDatabase {
     public static TopicRecordDatabase getInstance() {
         return Instance.INSTANCE;
     }
-
-    /**
-     * 返回dao对象
-     *
-     * @return 返回dao对象
-     */
-    public abstract TopicRecordDAO topicRecordDAO();
 }

@@ -54,8 +54,4 @@ public class CommentAdapter extends ListAdapter<Comment, CommentAdapter.DetailVi
             tvComment = itemView.findViewById(R.id.tvComment);
         }
     }
-
-    public void addComment(Comment comment) {
-        getCurrentList().add(comment);
-    }
 }

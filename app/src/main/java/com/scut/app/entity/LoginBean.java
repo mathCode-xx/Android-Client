@@ -15,11 +15,6 @@ public class LoginBean extends BaseObservable {
     private String id;
     private String password;
 
-    public LoginBean(String id, String password) {
-        this.id = id;
-        this.password = password;
-    }
-
     public LoginBean() {
     }
 

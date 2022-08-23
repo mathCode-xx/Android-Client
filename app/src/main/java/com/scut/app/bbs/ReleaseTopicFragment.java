@@ -8,11 +8,9 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
 
-import com.scut.app.MainActivity;
 import com.scut.app.bbs.vm.ReleaseViewModel;
 import com.scut.app.databinding.FragmentReleaseTopicBinding;
 import com.scut.app.entity.ResponseData;
@@ -54,6 +52,8 @@ public class ReleaseTopicFragment extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        binding.ivBack.setOnClickListener(v -> Navigation.findNavController(v).popBackStack());
+
         binding.tvRelease.setOnClickListener(v -> mViewModel.release(new CallBack() {
             @Override
             public void success(ResponseData responseData) {

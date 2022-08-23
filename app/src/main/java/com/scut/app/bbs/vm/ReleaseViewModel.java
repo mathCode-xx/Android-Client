@@ -2,11 +2,8 @@ package com.scut.app.bbs.vm;
 
 import android.util.Log;
 
-import androidx.databinding.Bindable;
-import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.scut.app.BR;
 import com.scut.app.MyApplication;
 import com.scut.app.bbs.bean.Topic;
 import com.scut.app.entity.ResponseData;
@@ -15,8 +12,6 @@ import com.scut.app.net.CallBack;
 import com.scut.app.net.ITopicServer;
 import com.scut.app.util.NetUtils;
 
-
-import cn.hutool.json.JSONUtil;
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
 import io.reactivex.rxjava3.annotations.NonNull;
 import io.reactivex.rxjava3.core.Single;

@@ -1,6 +1,5 @@
 package com.scut.app.entity;
 
-import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -15,14 +14,6 @@ public class ResponseData {
 
     public final static int SUCCESS_CODE = 200;
     public final static int FAIL_CODE = 500;
-
-    public ResponseData addData(String key, Object value) {
-        if (this.data == null) {
-            this.data = new HashMap<>(0);
-        }
-        this.data.put(key, value);
-        return this;
-    }
 
     static public ResponseData success() {
         ResponseData m = new ResponseData();

@@ -9,7 +9,6 @@ import com.scut.app.bbs.bean.Topic;
 import com.scut.app.entity.ResponseData;
 import com.scut.app.mine.info.model.InfoModel;
 import com.scut.app.net.CallBack;
-import com.scut.app.util.ToastUtils;
 
 import java.util.List;
 

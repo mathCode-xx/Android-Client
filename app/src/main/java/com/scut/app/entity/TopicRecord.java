@@ -2,7 +2,6 @@ package com.scut.app.entity;
 
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
-import androidx.room.Ignore;
 import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
@@ -14,20 +13,9 @@ import androidx.room.PrimaryKey;
 public class TopicRecord {
     @PrimaryKey
     @NonNull
-    public Long topicId;
+    public Long topicId = 0L;
 
     public Boolean liked;
 
     public Boolean collected;
-
-    public TopicRecord() {
-        this.topicId = 0L;
-    }
-
-    @Ignore
-    public TopicRecord(@NonNull Long topicId, Boolean liked, Boolean collected) {
-        this.topicId = topicId;
-        this.liked = liked;
-        this.collected = collected;
-    }
 }

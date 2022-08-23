@@ -1,17 +1,12 @@
 package com.scut.app.mine;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import androidx.activity.result.ActivityResult;
-import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContract;
-import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -22,10 +17,8 @@ import com.scut.app.MyApplication;
 import com.scut.app.databinding.FragmentMineBinding;
 import com.scut.app.entity.User;
 import com.scut.app.mine.info.MyBbsActivity;
-import com.scut.app.mine.info.fragment.MyTopicFragment;
 import com.scut.app.mine.manager.ManagerActivity;
 import com.scut.app.mine.vm.MineViewModel;
-import com.scut.app.util.ToastUtils;
 
 /**
  * 个人中心界面
@@ -34,10 +27,9 @@ import com.scut.app.util.ToastUtils;
  */
 public class MineFragment extends Fragment {
 
-    private static final String TAG = "MineFragment";
-
     private FragmentMineBinding binding;
     private ActivityResultLauncher<Void> launcher;
+    MineViewModel mViewModel;
 
     public static MineFragment newInstance() {
         return new MineFragment();
@@ -46,11 +38,13 @@ public class MineFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        launcher = registerForActivityResult(new LoginActivity.LoginActivityResultContract(), new ActivityResultCallback<String>() {
-            @Override
-            public void onActivityResult(String result) {
-                ToastUtils.show(result);
-                refreshUserInfo();
+        launcher = registerForActivityResult(new LoginActivity.LoginActivityResultContract(), result -> {
+            switch (result) {
+                case LoginActivity.LOGIN_SUCCESS:
+                case LoginActivity.REGISTER_SUCCESS:
+                    refreshUserInfo();
+                    break;
+                default:
             }
         });
     }
@@ -65,31 +59,44 @@ public class MineFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        MineViewModel mViewModel = new ViewModelProvider(this).get(MineViewModel.class);
+        mViewModel = new ViewModelProvider(this).get(MineViewModel.class);
+
+        init();
         if (MyApplication.getInstance().haveLogin()) {
             refreshUserInfo();
-        } else {
-            binding.tvClickLogin.setOnClickListener(v -> {
-                // TODO: 2022/8/14 跳转到登录页面
-                launcher.launch(null);
-            });
         }
+    }
 
+    /**
+     * 初始化控件（未登录状态）
+     */
+    private void init() {
+        //关闭个人信息显示
+        binding.clMineInfo.setVisibility(View.GONE);
+        //关闭管理界面显示
+        binding.cvManager.setVisibility(View.GONE);
+        //关闭退出登录按键
+        binding.btnLogout.setVisibility(View.GONE);
+
+        //设置个人博客的进入操作
         binding.ibMyDiscuss.setOnClickListener(v -> startMyBbsActivity(0));
         binding.clMyBbs.setOnClickListener(v -> startMyBbsActivity(0));
         binding.ibMyComment.setOnClickListener(v -> startMyBbsActivity(1));
         binding.ibMyCollection.setOnClickListener(v -> startMyBbsActivity(2));
 
-        binding.cvManager.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (!MyApplication.getInstance().haveLogin()) {
-                    launcher.launch(null);
-                    return;
-                }
-                ManagerActivity.startActivity(requireContext());
-            }
-        });
+        //打开登录按键，并设置按键监听事件
+        binding.tvClickLogin.setVisibility(View.VISIBLE);
+        binding.tvClickLogin.setOnClickListener(v -> launcher.launch(null));
+    }
+
+    private void logout() {
+        //清空全局变量
+        MyApplication.getInstance().clear();
+
+        //还原控件到未登录状态
+        init();
+
+        mViewModel.logout();
     }
 
     void startMyBbsActivity(int page) {
@@ -102,18 +109,36 @@ public class MineFragment extends Fragment {
         startActivity(intent);
     }
 
-    void refreshUserInfo() {
-        if (!MyApplication.getInstance().haveLogin()) {
-            return;
-        }
-        binding.clMineInfo.setVisibility(View.VISIBLE);
+    /**
+     * 登录状态刷新页面
+     */
+    private void refreshUserInfo() {
+        //关闭登录按键
         binding.tvClickLogin.setVisibility(View.GONE);
+        //显示个人信息
+        binding.clMineInfo.setVisibility(View.VISIBLE);
         User user = MyApplication.getInstance().getObj(MyApplication.USER_KEY, User.class);
         binding.tvUserName.setText(user.name);
         binding.tvUid.setText(user.id);
+
+        // 显示退出登录按键
+        binding.btnLogout.setVisibility(View.VISIBLE);
+        //退出登录
+        binding.btnLogout.setOnClickListener(v -> logout());
+
+        //根据当前用户的权限决定是否显示管理按键
         int permission = MyApplication.getInstance().getObj(MyApplication.USER_KEY, User.class).permission;
         if (permission == User.MANAGER || permission == User.SYSTEM_MANAGER) {
             binding.cvManager.setVisibility(View.VISIBLE);
+            binding.cvManager.setOnClickListener(v -> {
+                if (!MyApplication.getInstance().haveLogin()) {
+                    launcher.launch(null);
+                    return;
+                }
+                ManagerActivity.startActivity(requireContext());
+            });
+        } else {
+            binding.cvManager.setVisibility(View.GONE);
         }
     }
 }
