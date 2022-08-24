@@ -103,7 +103,6 @@ public class delete_class_information_Activity extends AppCompatActivity {
                 String Week_of_class_time_1 = Week_of_class_time.getText().toString();
                 String class_day_1 = class_day.getText().toString();
                 String lecture_time_1 = lecture_time.getText().toString();
-
                 SQLiteDatabase db = dbHelper;
                 ContentValues values = new ContentValues();
 
@@ -132,8 +131,6 @@ public class delete_class_information_Activity extends AppCompatActivity {
                 Toast.makeText(delete_class_information_Activity.this, "成功删除课程信息!", Toast.LENGTH_SHORT).show();
             }
         });
-
-
 
         //下面是返回按钮
         findDevices = findViewById(R.id.ic_back);

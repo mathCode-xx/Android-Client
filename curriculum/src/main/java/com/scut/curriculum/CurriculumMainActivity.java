@@ -239,7 +239,7 @@ public class CurriculumMainActivity extends AppCompatActivity {
             }
         });
 
-// 删除所有数据的写法
+        // 删除所有数据的写法
         TextView deleteData = (TextView) findViewById(R.id.delete);
         deleteData.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -313,7 +313,7 @@ public class CurriculumMainActivity extends AppCompatActivity {
         public void onClick(View view) {
             if (view.getId() == R.id.accept) {
                 //获取选中项
-                Spinner spinner = findViewById(R.id.spinner);
+                Spinner spinner =findViewById(R.id.spinner);
                 //这里要留着修改课表的项目
                 Toast.makeText(CurriculumMainActivity.this, Array[spinner.getSelectedItemPosition()], Toast.LENGTH_SHORT).show();
                 //先刷新，使得课程表上显示为空
@@ -485,8 +485,6 @@ public class CurriculumMainActivity extends AppCompatActivity {
                 view711.setText(" ");
                 TextView view712 = findViewById(R.id.class_7_12);
                 view712.setText(" ");
-
-
                 SQLiteDatabase db = dbHelper.getWritableDatabase();
                 Cursor cursor = db.query("Schedule", null, null, null, null, null, null);
 
@@ -1280,37 +1278,10 @@ public class CurriculumMainActivity extends AppCompatActivity {
                         Toast.makeText(CurriculumMainActivity.this, view712.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
-
-
-//                if (cursor.moveToFirst()) {
-//                    do {
-//                        //遍历Cursor对象，取出数据打印
-//                        @SuppressLint("Range") String class_name = cursor.getString(cursor.getColumnIndex("class_name"));
-//                        @SuppressLint("Range") String classroom = cursor.getString(cursor.getColumnIndex("classroom"));
-//                        @SuppressLint("Range") String teacher = cursor.getString(cursor.getColumnIndex("teacher"));
-//                        @SuppressLint("Range") int Week_of_class_time = cursor.getInt(cursor.getColumnIndex("Week_of_class_time"));
-//                        @SuppressLint("Range") int class_day = cursor.getInt(cursor.getColumnIndex("class_day"));
-//                        @SuppressLint("Range") int lecture_time = cursor.getInt(cursor.getColumnIndex("lecture_time"));
-//                        if (Array[spinner.getSelectedItemPosition()] == "第一周") {
-//                            if (Week_of_class_time == 1 && class_day == 1 && lecture_time == 1) {
-//                                TextView textView = findViewById(R.id.class_1_1);
-//                                textView.setText(class_name + '\n' + classroom + '\n' + teacher);
-//                                textView.setOnClickListener(new View.OnClickListener() {
-//                                    @Override
-//                                    public void onClick(View v) {
-//                                        Toast.makeText(CurriculumMainActivity.this, textView.getText(), Toast.LENGTH_LONG).show();
-//                                    }
-//                                });
-//                            }
-//                        }
-//                    } while (cursor.moveToNext());
-
-
             }
-
-
         }
     }
+
     private  final int REQUEST_EXTERNAL_STORAGE = 1;
     private  String[] PERMISSIONS_STORAGE = {
             Manifest.permission.READ_EXTERNAL_STORAGE,
