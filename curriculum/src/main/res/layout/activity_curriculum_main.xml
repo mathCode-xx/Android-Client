@@ -17,7 +17,8 @@
             android:background="@color/white"
             android:clickable="true"
             android:gravity="center"
-            android:text="2022年" />
+            android:text="自动
+            导入" />
 
         <View
             android:layout_width="1dp"

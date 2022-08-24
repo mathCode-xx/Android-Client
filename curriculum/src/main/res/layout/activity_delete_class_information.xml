@@ -87,14 +87,14 @@
         android:orientation="horizontal">
 
         <Button
-            android:text="课程名查询"
+            android:text="按课程名查询"
             android:id="@+id/search_1"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"/>
 
         <Button
-            android:text="时间查询"
+            android:text="按时间查询"
             android:id="@+id/search_2"
             android:layout_width="0dp"
             android:layout_weight="1"
@@ -102,18 +102,17 @@
 
         <Button
             android:id="@+id/delete_information_1"
-            android:text="课程名删除"
+            android:text="按课程名删除"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"/>
 
         <Button
             android:id="@+id/delete_information_2"
-            android:text="时间删除"
+            android:text="按时间删除"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"/>
-
 
     </LinearLayout>
 

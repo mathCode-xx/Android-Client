@@ -304,8 +304,6 @@ public class CurriculumMainActivity extends AppCompatActivity {
         //设置按钮监听器
         buttonok.setOnClickListener(new MyonClickListener());
         // 定义按钮点击监听器
-
-
         CurriculumMainActivity.activityList.add(this);
     }
 
