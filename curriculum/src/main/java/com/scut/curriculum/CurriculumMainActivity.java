@@ -1,11 +1,14 @@
 package com.scut.curriculum;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -20,7 +23,55 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.DateUtil;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.collection.LongSparseArray;
+import androidx.core.app.ActivityCompat;
+
+import android.Manifest;
+import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.content.ContentValues;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import java.io.FileInputStream;
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
+
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.*;
+
+import java.io.InputStream;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import java.util.List;
 import java.util.Objects;
 
@@ -56,110 +107,210 @@ public class CurriculumMainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                int num = 0;
+                Workbook wb = null;
+                Sheet sheet = null;
+                Row row = null;
+                String filePath = "/data/data/com.scut.curriculum/information.xls";
+                wb = readExcel(filePath);
+                List<List<List<Object>>> list = new ArrayList<>();
+                if (wb != null) {
+                    try {
+                        //System.err.println("页签数量：" + wb.getNumberOfSheets());
+                        // 循环页签
+                        for (int sheetNum = 0; sheetNum < wb.getNumberOfSheets(); sheetNum++) {
+                            // 指定页签的值
+                            sheet = wb.getSheetAt(sheetNum);
+                            // 定义存放一个页签中所有数据的List
+                            List<List<Object>> sheetList = new ArrayList<>();
+                            num = sheet.getLastRowNum();
 
+                            System.err.println("行总数：" + sheet.getLastRowNum());
+                            // 循环行
+                            for (int rowNum = 1; rowNum <= sheet.getLastRowNum(); rowNum++) {
+                                // 指定行的值
+                                row = sheet.getRow(rowNum);
+                                // 定义存放一行数据的List
+                                List<Object> rowList = new ArrayList<>();
+                                // 循环列
+                                //System.err.println("列总数：" + row.getLastCellNum());
+                                for (int cellNum = 0; cellNum < row.getLastCellNum(); cellNum++) {
+                                    Cell cell = sheet.getRow(rowNum).getCell(cellNum);
+                                    rowList.add(getStringCellValue(cell));
+                                }
+                                sheetList.add(rowList);
+                            }
+                            list.add(sheetList);
+                        }
+
+                        //System.out.println(list.get(0).get(0));
+                        //System.err.println(list.toString());
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
                 SQLiteDatabase db = dbHelper.getWritableDatabase();
                 ContentValues values = new ContentValues();
                 //开始组装数据，我做一个示范
-                values.put("class_name", "高等代数习题课");
-                values.put("credit", 1);
-                values.put("classroom", "博学楼101");
-                values.put("teacher", "陈六");
-                values.put("Week_of_class_time", 20);
-                values.put("class_day", 7);
-                values.put("lecture_time", 12);
-                db.insert("Schedule", null, values);
-                values.clear();
+                //num是课程信息总数（行数）
+                for(int i = 0;i < num; i++){
+                    int startWeek = (int)Float.parseFloat(list.get(0).get(i).get(4).toString());
+                    int endWeek = (int)Float.parseFloat(list.get(0).get(i).get(5).toString());
+                    int startTime = (int)Float.parseFloat(list.get(0).get(i).get(7).toString());
+                    int endTime = (int)Float.parseFloat(list.get(0).get(i).get(8).toString());
+                    for(int temp1 = startWeek;temp1 <= endWeek;temp1++){
+                        for(int temp2 = startTime;temp2 <= endTime;temp2++){
+                            values.put("class_name",list.get(0).get(i).get(0).toString());
+                            values.put("credit", (int)Float.parseFloat(list.get(0).get(i).get(1).toString()));
+                            values.put("classroom", list.get(0).get(i).get(2).toString());
+                            values.put("teacher", list.get(0).get(i).get(3).toString());
+                            values.put("lecture_time", temp2);
+                            values.put("Week_of_class_time", temp1);
+                            values.put("class_day", (int)Float.parseFloat(list.get(0).get(i).get(6).toString()));
 
-                for (int i = 1; i <= 16; i++) {
-                    for (int j = 1; j <= 2; j++) {
-                        values.put("class_name", "复变函数");
-                        values.put("credit", 4);
-                        values.put("classroom", "博学楼412");
-                        values.put("teacher", "武文");
-                        values.put("Week_of_class_time", i);
-                        values.put("class_day", 1);
-                        values.put("lecture_time", j);
-                        db.insert("Schedule", null, values);
-                        values.clear();
+                            db.insert("Schedule", null, values);
+                            values.clear();
+                        }
                     }
-                    for (int j = 3; j <= 4; j++) {
-                        values.put("class_name", "复变函数");
-                        values.put("credit", 4);
-                        values.put("classroom", "博学楼412");
-                        values.put("teacher", "武文");
-                        values.put("Week_of_class_time", i);
-                        values.put("class_day", 4);
-                        values.put("lecture_time", j);
-                        db.insert("Schedule", null, values);
-                        values.clear();
-                    }
+
+
                 }
 
+//                String str = list.get(0).get(0).get(0).toString();
+//                System.out.println(str);
+//                values.put("class_name",str);
+//                values.put("credit", 1);
+//                values.put("classroom", "博学楼101");
+//                values.put("teacher", "陈六");
+//                values.put("Week_of_class_time", 20);
+//                values.put("class_day", 7);
+//                values.put("lecture_time", 1);
+//                db.insert("Schedule", null, values);
+//                values.clear();
 
-                for (int i = 1; i <= 16; i++) {
-                    values.put("class_name", "数学分析选讲");
-                    values.put("credit", 3);
-                    values.put("classroom", "博学楼103");
-                    values.put("teacher", "张三");
-                    values.put("Week_of_class_time", i);
-                    values.put("class_day", 1);
-                    values.put("lecture_time", 7);
-                    db.insert("Schedule", null, values);
-                    values.clear();
 
-                    values.put("class_name", "数学分析选讲");
-                    values.put("credit", 3);
-                    values.put("classroom", "博学楼103");
-                    values.put("teacher", "张三");
-                    values.put("Week_of_class_time", i);
-                    values.put("class_day", 1);
-                    values.put("lecture_time", 8);
-                    db.insert("Schedule", null, values);
-                    values.clear();
-
-                    values.put("class_name", "计算机原理");
-                    values.put("credit", 4);
-                    values.put("classroom", "博学楼203");
-                    values.put("teacher", "李四");
-                    values.put("Week_of_class_time", i);
-                    values.put("class_day", 4);
-                    values.put("lecture_time", 5);
-                    db.insert("Schedule", null, values);
-                    values.clear();
-
-                    values.put("class_name", "计算机原理");
-                    values.put("credit", 4);
-                    values.put("classroom", "博学楼203");
-                    values.put("teacher", "李四");
-                    values.put("Week_of_class_time", i);
-                    values.put("class_day", 4);
-                    values.put("lecture_time", 6);
-                    db.insert("Schedule", null, values);
-                    values.clear();
-
-                    values.put("class_name", "操作系统");
-                    values.put("credit", 4);
-                    values.put("classroom", "博学楼306");
-                    values.put("teacher", "王五");
-                    values.put("Week_of_class_time", i);
-                    values.put("class_day", 3);
-                    values.put("lecture_time", 3);
-                    db.insert("Schedule", null, values);
-                    values.clear();
-
-                    values.put("class_name", "操作系统");
-                    values.put("credit", 4);
-                    values.put("classroom", "博学楼306");
-                    values.put("teacher", "王五");
-                    values.put("Week_of_class_time", i);
-                    values.put("class_day", 3);
-                    values.put("lecture_time", 4);
-                    db.insert("Schedule", null, values);
-                    values.clear();
-                }
+//                for (int i = 1; i <= 16; i++) {
+//                    values.put("class_name", "数学分析选讲");
+//                    values.put("credit", 3);
+//                    values.put("classroom", "博学楼103");
+//                    values.put("teacher", "张三");
+//                    values.put("Week_of_class_time", i);
+//                    values.put("class_day", 1);
+//                    values.put("lecture_time", 7);
+//                    db.insert("Schedule", null, values);
+//                    values.clear();
+//
+//                    values.put("class_name", "数学分析选讲");
+//                    values.put("credit", 3);
+//                    values.put("classroom", "博学楼103");
+//                    values.put("teacher", "张三");
+//                    values.put("Week_of_class_time", i);
+//                    values.put("class_day", 1);
+//                    values.put("lecture_time", 8);
+//                    db.insert("Schedule", null, values);
+//                    values.clear();
+//
+//                    values.put("class_name", "计算机原理");
+//                    values.put("credit", 4);
+//                    values.put("classroom", "博学楼203");
+//                    values.put("teacher", "李四");
+//                    values.put("Week_of_class_time", i);
+//                    values.put("class_day", 4);
+//                    values.put("lecture_time", 5);
+//                    db.insert("Schedule", null, values);
+//                    values.clear();
+//
+//                    values.put("class_name", "计算机原理");
+//                    values.put("credit", 4);
+//                    values.put("classroom", "博学楼203");
+//                    values.put("teacher", "李四");
+//                    values.put("Week_of_class_time", i);
+//                    values.put("class_day", 4);
+//                    values.put("lecture_time", 6);
+//                    db.insert("Schedule", null, values);
+//                    values.clear();
+//
+//                    values.put("class_name", "操作系统");
+//                    values.put("credit", 4);
+//                    values.put("classroom", "博学楼306");
+//                    values.put("teacher", "王五");
+//                    values.put("Week_of_class_time", i);
+//                    values.put("class_day", 3);
+//                    values.put("lecture_time", 3);
+//                    db.insert("Schedule", null, values);
+//                    values.clear();
+//
+//                    values.put("class_name", "操作系统");
+//                    values.put("credit", 4);
+//                    values.put("classroom", "博学楼306");
+//                    values.put("teacher", "王五");
+//                    values.put("Week_of_class_time", i);
+//                    values.put("class_day", 3);
+//                    values.put("lecture_time", 4);
+//                    db.insert("Schedule", null, values);
+//                    values.clear();
+//                }
 
 
             }
+            //判断文件格式
+            private  Workbook readExcel(String filePath){
+                if(filePath==null){
+                    return null;
+                }
+                String extString = filePath.substring(filePath.lastIndexOf("."));
+
+                try {
+                    @SuppressWarnings("resource")
+                    InputStream is = new FileInputStream(filePath);
+                    if(".xls".equals(extString)){
+                        return new HSSFWorkbook(is);
+                    }else if(".xlsx".equals(extString)){
+                        return new XSSFWorkbook(is);
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                return null;
+            }
+
+            @SuppressWarnings("deprecation")
+            public  String getStringCellValue(Cell cell) {
+                String cellvalue = "";
+                if (cell == null) {
+                    return "";
+                }
+                switch (cell.getCellType()) {
+                    case STRING:
+                        cellvalue = cell.getStringCellValue();
+                        break;
+                    case NUMERIC:
+                        if (DateUtil.isCellDateFormatted(cell)) {
+                            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                            Date date = cell.getDateCellValue();
+                            cellvalue = sdf.format(date);
+                        } else {
+                            cellvalue = String.valueOf(cell.getNumericCellValue());
+                        }
+                        break;
+                    case BOOLEAN:
+                        cellvalue = String.valueOf(cell.getBooleanCellValue());
+                        break;
+                    case BLANK:
+                        cellvalue = "";
+                        break;
+                    default:
+                        cellvalue = "";
+                        break;
+                }
+                if (cellvalue == "") {
+                    return "";
+                }
+                return cellvalue;
+            }
+
+
         });
 
         //下面写增删改页面的转移按钮
@@ -1244,6 +1395,20 @@ public class CurriculumMainActivity extends AppCompatActivity {
             }
 
 
+        }
+    }
+    private  final int REQUEST_EXTERNAL_STORAGE = 1;
+    private  String[] PERMISSIONS_STORAGE = {
+            Manifest.permission.READ_EXTERNAL_STORAGE,
+            Manifest.permission.WRITE_EXTERNAL_STORAGE };
+    public  void verifyStoragePermissions(Activity activity) {
+        // Check if we have write permission
+        int permission = ActivityCompat.checkSelfPermission(activity,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        if (permission != PackageManager.PERMISSION_GRANTED) {
+            // We don't have permission so prompt the user
+            ActivityCompat.requestPermissions(activity, PERMISSIONS_STORAGE,
+                    REQUEST_EXTERNAL_STORAGE);
         }
     }
 }
