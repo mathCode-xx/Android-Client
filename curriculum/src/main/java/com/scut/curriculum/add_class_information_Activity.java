@@ -51,7 +51,10 @@ public class add_class_information_Activity extends AppCompatActivity {
                 String lecture_time_1 = lecture_time.getText().toString();
                 String lecture_time_1_end = lecture_time_end.getText().toString();
 
-                Float credit_2 = Float.parseFloat(credit_1);//数据类型转换
+                if(credit_1 != null){
+                    Float credit_2 = Float.parseFloat(credit_1);//数据类型转换
+                }
+
                 int Week_of_class_time_2 = Integer.parseInt(Week_of_class_time_1);
                 int Week_of_class_time_2_end = Integer.parseInt(Week_of_class_time_1_end);
                 int class_day_2 = Integer.parseInt(class_day_1);

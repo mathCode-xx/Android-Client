@@ -19,6 +19,9 @@
             android:name=".add_class_information_Activity"
             android:exported="false" />
         <activity
+            android:name=".stat_class_information_Activity"
+            android:exported="false" />
+        <activity
             android:name=".ChangeActivity"
             android:exported="false" />
         <activity

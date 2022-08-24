@@ -45,7 +45,14 @@ public class ChangeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        TextView stat_information = findViewById(R.id.stat_class_information);
+        stat_information.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ChangeActivity.this, stat_class_information_Activity.class);
+                startActivity(intent);
+            }
+        });
         //下面是返回按钮
         findDevices = findViewById(R.id.ic_back);
         findDevices.setOnClickListener(new View.OnClickListener() {

@@ -46,7 +46,7 @@ android {
 }
 
 dependencies {
-// https://mvnrepository.com/artifact/net.sourceforge.jexcelapi/jxl
+    // https://mvnrepository.com/artifact/net.sourceforge.jexcelapi/jxl
     implementation group: 'net.sourceforge.jexcelapi', name: 'jxl', version: '2.6.12'
 
     implementation 'androidx.appcompat:appcompat:1.3.1'
@@ -63,6 +63,5 @@ dependencies {
     implementation group: 'org.apache.poi', name: 'poi-ooxml', version: '4.1.2'
     // https://mvnrepository.com/artifact/org.jsoup/jsoup
     implementation 'org.jsoup:jsoup:1.13.1'
-
 
 }
