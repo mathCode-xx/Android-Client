@@ -118,16 +118,6 @@ public class add_class_information_Activity extends AppCompatActivity {
                     }
 
                 }
-
-                values.put("class_name", class_name_1);
-                values.put("credit", credit_1);
-                values.put("classroom", classroom_1);
-                values.put("teacher", teacher_1);
-                values.put("Week_of_class_time", Week_of_class_time_1);
-                values.put("class_day", class_day_1);
-                values.put("lecture_time", lecture_time_1);
-                db.insert("Schedule", null, values);
-                values.clear();
                 Toast.makeText(add_class_information_Activity.this, "成功插入课程信息!", Toast.LENGTH_SHORT).show();
             }
         });

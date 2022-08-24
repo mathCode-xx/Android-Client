@@ -88,6 +88,19 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/Week_of_class_time_end"
+            android:hint="请输入课程结束周数"
+            android:maxLines="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
     </LinearLayout>
 
     <LinearLayout
@@ -115,6 +128,18 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/lecture_time_end"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="请输入课程在一天中的结束时间"
+            android:maxLines="1" />
     </LinearLayout>
 
     <LinearLayout

@@ -28,8 +28,12 @@ public class change_class_information_Activity extends AppCompatActivity {
         EditText classroom = (EditText) findViewById(R.id.classroom);
         EditText teacher = (EditText) findViewById(R.id.teacher);
         EditText Week_of_class_time = (EditText) findViewById(R.id.Week_of_class_time);
+        EditText Week_of_class_time_end = (EditText) findViewById(R.id.Week_of_class_time_end);
         EditText class_day = (EditText) findViewById(R.id.class_day);
         EditText lecture_time = (EditText) findViewById(R.id.lecture_time);
+        EditText lecture_time_end = (EditText) findViewById(R.id.lecture_time_end);
+
+
 
 
 
@@ -43,13 +47,17 @@ public class change_class_information_Activity extends AppCompatActivity {
                 String classroom_1 = classroom.getText().toString();
                 String teacher_1 = teacher.getText().toString();
                 String Week_of_class_time_1 = Week_of_class_time.getText().toString();
+                String Week_of_class_time_1_end = Week_of_class_time_end.getText().toString();
                 String class_day_1 = class_day.getText().toString();
                 String lecture_time_1 = lecture_time.getText().toString();
+                String lecture_time_1_end = lecture_time_end.getText().toString();
 
                 Float credit_2 = Float.parseFloat(credit_1);//数据类型转换
                 int Week_of_class_time_2 = Integer.parseInt(Week_of_class_time_1);
+                int Week_of_class_time_2_end = Integer.parseInt(Week_of_class_time_1_end);
                 int class_day_2 = Integer.parseInt(class_day_1);
                 int lecture_time_2 = Integer.parseInt(lecture_time_1);
+                int lecture_time_2_end = Integer.parseInt(lecture_time_1_end);
 
                 SQLiteDatabase db = dbHelper;
                 //查询所有的数据
@@ -86,24 +94,36 @@ public class change_class_information_Activity extends AppCompatActivity {
                 String classroom_1 = classroom.getText().toString();
                 String teacher_1 = teacher.getText().toString();
                 String Week_of_class_time_1 = Week_of_class_time.getText().toString();
+                String Week_of_class_time_1_end = Week_of_class_time_end.getText().toString();
                 String class_day_1 = class_day.getText().toString();
                 String lecture_time_1 = lecture_time.getText().toString();
+                String lecture_time_1_end = lecture_time_end.getText().toString();
 
+                Float credit_2 = Float.parseFloat(credit_1);//数据类型转换
+                int Week_of_class_time_2 = Integer.parseInt(Week_of_class_time_1);
+                int Week_of_class_time_2_end = Integer.parseInt(Week_of_class_time_1_end);
+                int class_day_2 = Integer.parseInt(class_day_1);
+                int lecture_time_2 = Integer.parseInt(lecture_time_1);
+                int lecture_time_2_end = Integer.parseInt(lecture_time_1_end);
                 SQLiteDatabase db = dbHelper;
                 ContentValues values = new ContentValues();
-                values.put("class_name", class_name_1);
-                values.put("credit", credit_1);
-                values.put("classroom", classroom_1);
-                values.put("teacher", teacher_1);
-                values.put("Week_of_class_time", Week_of_class_time_1);
-                values.put("class_day", class_day_1);
-                values.put("lecture_time", lecture_time_1);
-                db.update("Schedule", values, "Week_of_class_time = ? and class_day = ? and lecture_time = ?",new String[] {Week_of_class_time_1,class_day_1,lecture_time_1});
-                values.clear();
-                Toast.makeText(change_class_information_Activity.this, "成功更改课程信息!", Toast.LENGTH_SHORT).show();
+                for(int i = Week_of_class_time_2;i <= Week_of_class_time_2_end; i++ ){
+                    for(int j = lecture_time_2;j <= lecture_time_2_end; j++){
+                        values.put("class_name", class_name_1);
+                        values.put("credit", credit_1);
+                        values.put("classroom", classroom_1);
+                        values.put("teacher", teacher_1);
+                        values.put("Week_of_class_time", i);
+                        values.put("class_day", class_day_1);
+                        values.put("lecture_time", j);
+                        db.insert("Schedule", null, values);
+                        values.clear();
+                    }
+
+                }
+                Toast.makeText(change_class_information_Activity.this, "成功插入课程信息!", Toast.LENGTH_SHORT).show();
             }
         });
-
 
         //下面是返回按钮
         findDevices = findViewById(R.id.ic_back);
