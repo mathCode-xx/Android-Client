@@ -66,5 +66,6 @@ public class User extends BaseObservable {
 
     public User() {
         this.id = "";
+        this.permission = TOURIST;
     }
 }

@@ -130,6 +130,14 @@ public class MineFragment extends Fragment {
         int permission = MyApplication.getInstance().getObj(MyApplication.USER_KEY, User.class).permission;
         if (permission == User.MANAGER || permission == User.SYSTEM_MANAGER) {
             binding.cvManager.setVisibility(View.VISIBLE);
+
+            //普通管理员没有查看日志信息的权限，系统管理员可以
+            if (permission == User.MANAGER) {
+                binding.ivLog.setVisibility(View.GONE);
+            } else {
+                binding.ivLog.setVisibility(View.VISIBLE);
+            }
+
             binding.cvManager.setOnClickListener(v -> {
                 if (!MyApplication.getInstance().haveLogin()) {
                     launcher.launch(null);

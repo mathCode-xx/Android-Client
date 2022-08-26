@@ -85,7 +85,7 @@ public class LoginModel {
         MyApplication.getInstance().putObj(MyApplication.USER_KEY, user);
 
         //根据配置文件中的是否记住密码来决定是否将密码保存到数据库
-        if (SharedPreferenceUtils.getSharedPreference()
+        if (SharedPreferenceUtils
                 .getBoolean(SharedPreferenceUtils.REMEMBER_KEY, false)) {
             user.password = loginBean.getPassword();
         }

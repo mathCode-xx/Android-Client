@@ -78,15 +78,19 @@ public class BbsFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
 
+        normalModel();
+
+        //隐藏底部导航栏
         MainActivity activity = (MainActivity) requireActivity();
         activity.showBottom();
 
+        //设置RecycleView
         binding.rvBrief.setLayoutManager(new LinearLayoutManager(requireContext()));
         binding.rvBrief.setAdapter(adapter);
 
+        //启动下拉刷新
         binding.srlBrief.setRefreshing(true);
         binding.srlBrief.setOnRefreshListener(adapter::refresh);
-
         mViewModel.getLiveData().observe(getViewLifecycleOwner(), pagingData -> adapter.submitData(getLifecycle(), pagingData));
 
         //切换到发布帖子界面
@@ -103,5 +107,31 @@ public class BbsFragment extends Fragment {
                 launcher.launch(null);
             }
         });
+    }
+
+    /**
+     * 搜索模式下的头部布局
+     */
+    private void searchModel() {
+        binding.etSearch.setVisibility(View.VISIBLE);
+        binding.tvSearch.setVisibility(View.VISIBLE);
+        binding.ivMore.setVisibility(View.GONE);
+        binding.tvSearch.setOnClickListener(v -> {
+
+        });
+        binding.ivSearch.setOnClickListener(v -> normalModel());
+    }
+
+    /**
+     * 普通模式下头部布局
+     *
+     */
+    private void normalModel() {
+        binding.etSearch.setVisibility(View.GONE);
+        binding.tvSearch.setVisibility(View.GONE);
+        binding.ivMore.setVisibility(View.VISIBLE);
+
+        //搜索按钮触发事件
+        binding.ivSearch.setOnClickListener(v -> searchModel());
     }
 }

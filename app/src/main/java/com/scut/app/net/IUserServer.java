@@ -3,6 +3,7 @@ package com.scut.app.net;
 import com.scut.app.entity.LoginBean;
 import com.scut.app.entity.ResponseData;
 import com.scut.app.entity.User;
+import com.scut.app.key.entity.Secret;
 
 import java.util.List;
 
@@ -20,6 +21,12 @@ import retrofit2.http.PUT;
  * @author 徐鑫
  */
 public interface IUserServer {
+
+    @GET("user/pub")
+    Single<ResponseData> requirePubKey();
+
+    @POST("user/init")
+    Single<ResponseData> init(@Body Secret secret);
 
     @POST("user/login")
     Observable<ResponseData> login(@Body LoginBean loginBean);

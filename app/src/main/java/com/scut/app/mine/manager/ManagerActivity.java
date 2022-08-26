@@ -10,13 +10,17 @@ import androidx.fragment.app.Fragment;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.google.android.material.tabs.TabLayoutMediator;
+import com.scut.app.MyApplication;
 import com.scut.app.databinding.ActivityManagerBinding;
+import com.scut.app.entity.User;
 import com.scut.app.mine.manager.fragment.AuditFragment;
 import com.scut.app.mine.manager.fragment.FinishFragment;
+import com.scut.app.mine.manager.fragment.LogFragment;
 
 public class ManagerActivity extends AppCompatActivity {
 
     ActivityManagerBinding binding;
+    User user = MyApplication.getInstance().getObj(MyApplication.USER_KEY, User.class);
 
     /**
      * 启动ManagerActivity
@@ -38,27 +42,38 @@ public class ManagerActivity extends AppCompatActivity {
             @Override
             public Fragment createFragment(int position) {
                 switch (position) {
+                    case 0:
+                        return AuditFragment.newInstance();
                     case 1:
                         return FinishFragment.newInstance();
                     default:
-                        return AuditFragment.newInstance();
+                        return LogFragment.newInstance();
                 }
             }
 
             @Override
             public int getItemCount() {
-                return 2;
+                if (user.permission == User.MANAGER) {
+                    return 2;
+                } else if (user.permission == User.SYSTEM_MANAGER) {
+                    return 3;
+                }
+                return 0;
             }
         });
 
         new TabLayoutMediator(binding.tlManger, binding.vpManager, (tab, position) -> {
             switch (position) {
+                case 0:
+                    tab.setText("待审核");
+                    break;
                 case 1:
                     tab.setText("已完成");
                     break;
-                default:
-                    tab.setText("待审核");
+                case 2:
+                    tab.setText("操作日志");
                     break;
+                default:
             }
         }).attach();
     }

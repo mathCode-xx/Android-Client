@@ -27,12 +27,13 @@
         <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/layout/activity_test.xml" value="0.20018115942028986" />
         <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/layout/content_login.xml" value="0.25364583333333335" />
         <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/layout/fragment_audit.xml" value="0.176" />
-        <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/layout/fragment_bbs.xml" value="0.21331521739130435" />
+        <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/layout/fragment_bbs.xml" value="0.414468085106383" />
         <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/layout/fragment_blank.xml" value="0.2006340579710145" />
-        <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/layout/fragment_detail.xml" value="0.2" />
+        <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/layout/fragment_detail.xml" value="0.4" />
         <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/layout/fragment_finish.xml" value="0.264" />
         <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/layout/fragment_first.xml" value="0.1" />
         <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/layout/fragment_forget.xml" value="0.20018115942028986" />
+        <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/layout/fragment_log.xml" value="0.20081595648232095" />
         <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/layout/fragment_login.xml" value="0.4" />
         <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/layout/fragment_mine.xml" value="0.4" />
         <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/layout/fragment_my_collection.xml" value="0.18795289855072464" />
@@ -43,7 +44,8 @@
         <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/layout/fragment_second.xml" value="0.25364583333333335" />
         <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/layout/item_audit.xml" value="0.6" />
         <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/layout/item_brief.xml" value="0.264" />
-        <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/layout/item_comment.xml" value="0.536" />
+        <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/layout/item_comment.xml" value="0.25" />
+        <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/layout/item_log.xml" value="0.4" />
         <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/layout/item_my_topic.xml" value="0.536" />
         <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/layout/layout_head.xml" value="0.24139492753623187" />
         <entry key="..\:/Develop/Code/android_project/APP/app/src/main/res/layout/layout_icon_bbs.xml" value="0.12335359675785208" />

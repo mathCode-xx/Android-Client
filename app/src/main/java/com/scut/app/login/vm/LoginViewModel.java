@@ -43,10 +43,9 @@ public class LoginViewModel extends AndroidViewModel {
 
     public void login(LoginModel.ILoginDataCallback callback) {
         //将是否记住密码存入配置文件
-        SharedPreferenceUtils.getSharedPreference().edit()
-                .putBoolean(SharedPreferenceUtils.REMEMBER_KEY
-                        , rememberPassword.getValue() != null && rememberPassword.getValue())
-                .apply();
+        SharedPreferenceUtils.putBoolean(SharedPreferenceUtils.REMEMBER_KEY
+                , rememberPassword.getValue() != null && rememberPassword.getValue());
+
         LoginBean value = loginMsg.getValue();
         if (value == null) {
             //检测loginMsg是否丢失，如果丢失，说明代码有问题，需要debug
@@ -77,7 +76,7 @@ public class LoginViewModel extends AndroidViewModel {
             this.rememberPassword = new MutableLiveData<>(false);
         }
         //读取配置文件，上一次登录是否记住了密码
-        rememberPassword.setValue(SharedPreferenceUtils.getSharedPreference()
+        rememberPassword.setValue(SharedPreferenceUtils
                 .getBoolean(SharedPreferenceUtils.REMEMBER_KEY, false));
         //读取数据库的用户信息，并显示最近登录的用户到界面上
         Single<User> userSingle = UserDatabase.getInstance().userDAO().selectOne();

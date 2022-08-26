@@ -75,7 +75,11 @@ public class DetailFragment extends Fragment {
         init();
 
         if (MyApplication.getInstance().haveLogin()) {
-            loadAfterLogin();
+            if (!MyApplication.getInstance().isTourist()) {
+                loadAfterLogin();
+            } else {
+                binding.btnComment.setText("不可使用");
+            }
         }
     }
 

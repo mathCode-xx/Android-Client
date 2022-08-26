@@ -4,6 +4,9 @@ import android.app.Application;
 import android.util.Log;
 
 import com.scut.app.entity.User;
+import com.scut.app.key.entity.Secret;
+import com.scut.app.key.symmetry.SymmetryGenerator;
+import com.scut.app.net.UserServer;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -21,11 +24,20 @@ public class MyApplication extends Application {
     public static final String TOKEN_KEY = "token";
 
     private static MyApplication instance;
+    private Secret secret;
 
     private final Map<String, String> map = new HashMap<>();
 
     public static MyApplication getInstance() {
         return instance;
+    }
+
+    public Secret getSecret() {
+        return secret;
+    }
+
+    public void setSecret(Secret secret) {
+        this.secret = secret;
     }
 
     public void clear() {
@@ -73,5 +85,7 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
         instance = this;
+        SymmetryGenerator.create();
+        new UserServer().requirePubKey();
     }
 }
