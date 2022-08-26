@@ -29,13 +29,13 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="2b58f29e-3ed8-47c0-bf76-c2f0523d15d5">
-      <console name="Connection" type="STANDARD" schema="main" session="Main" />
+      <console name="Connection" type="STANDARD" schema="" session="Main" />
     </connection>
     <connection id="f35fa6c0-ff05-4ad3-958f-f5d06425a050">
-      <console name="Connection 1" type="STANDARD" schema="main" session="Main"><![CDATA[select * from "User"]]></console>
+      <console name="Connection 1" type="STANDARD" schema="" session="Main" />
     </connection>
     <connection id="f8af4c81-59d0-4990-b503-88b3632b0e81">
-      <console name="Connection 2" type="STANDARD" schema="main" session="Main"><![CDATA[select * from User;]]></console>
+      <console name="Connection 2" type="STANDARD" schema="" session="Main" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">

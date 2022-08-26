@@ -1,8 +1,5 @@
 package com.scut.curriculum;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -11,10 +8,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
-import android.provider.ContactsContract;
-import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -23,7 +17,11 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.DateUtil;
 import org.apache.poi.ss.usermodel.Row;
@@ -36,44 +34,8 @@ import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.collection.LongSparseArray;
-import androidx.core.app.ActivityCompat;
-
-import android.Manifest;
-import android.annotation.SuppressLint;
-import android.app.Activity;
-import android.content.ContentValues;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.Spinner;
-import android.widget.TextView;
-import android.widget.Toast;
-
-import java.io.FileInputStream;
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
-
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.ss.usermodel.*;
-
-import java.io.InputStream;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import java.util.List;
-import java.util.Objects;
 
 public class CurriculumMainActivity extends AppCompatActivity {
     private ImageButton findDevices;
@@ -255,36 +217,6 @@ public class CurriculumMainActivity extends AppCompatActivity {
             }
         });
 
-
-        Button button2 = findViewById(R.id.second);
-
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(CurriculumMainActivity.this, SecondActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        Button button3 = findViewById(R.id.third);
-
-        button3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(CurriculumMainActivity.this, ThirdActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        Button button4 = findViewById(R.id.fourth);
-
-        button4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(CurriculumMainActivity.this, Setting.class);
-                startActivity(intent);
-            }
-        });
         findDevices = findViewById(R.id.ic_back);
         findDevices.setOnClickListener(new View.OnClickListener() {
             @Override
