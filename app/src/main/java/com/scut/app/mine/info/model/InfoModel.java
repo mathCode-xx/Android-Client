@@ -34,11 +34,11 @@ public class InfoModel {
 
                     @Override
                     public void onSuccess(@NonNull ResponseData responseData) {
-                        if (responseData.getStatusCode() == ResponseData.SUCCESS_CODE) {
+                        if (responseData.getErrCode() == ResponseData.SUCCESS_CODE) {
                             callBack.success(responseData);
                             return;
                         }
-                        callBack.fail(responseData.getMessage());
+                        callBack.fail(responseData.getErrMessage());
                     }
 
                     @Override
@@ -60,11 +60,11 @@ public class InfoModel {
 
                     @Override
                     public void onSuccess(@NonNull ResponseData responseData) {
-                        if (responseData.getStatusCode() == ResponseData.SUCCESS_CODE) {
+                        if (responseData.getErrCode() == ResponseData.SUCCESS_CODE) {
                             callBack.success(responseData);
                             return;
                         }
-                        callBack.fail(responseData.getMessage());
+                        callBack.fail(responseData.getErrMessage());
                     }
 
                     @Override

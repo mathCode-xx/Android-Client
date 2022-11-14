@@ -48,10 +48,10 @@ public class ReleaseViewModel extends ViewModel {
 
                     @Override
                     public void onSuccess(@NonNull ResponseData responseData) {
-                        if (responseData.getStatusCode() == ResponseData.SUCCESS_CODE) {
+                        if (responseData.getErrCode() == ResponseData.SUCCESS_CODE) {
                             callBack.success(responseData);
                         } else {
-                            callBack.fail(responseData.getMessage());
+                            callBack.fail(responseData.getErrMessage());
                         }
                     }
 

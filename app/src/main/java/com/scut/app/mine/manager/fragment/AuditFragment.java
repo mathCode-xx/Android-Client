@@ -58,7 +58,7 @@ public class AuditFragment extends Fragment {
             binding.btnCommit.setOnClickListener(v -> mViewModel.commitAudit(adapter.getCommitUserId(), new CallBack() {
                 @Override
                 public void success(ResponseData responseData) {
-                    ToastUtils.show(responseData.getMessage());
+                    ToastUtils.show(responseData.getErrMessage());
                     adapter.deleteItem();
                     binding.layoutBottom.setVisibility(View.GONE);
                 }

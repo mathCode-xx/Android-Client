@@ -44,8 +44,8 @@ public class BbsModel {
 
                     @Override
                     public void onSuccess(@NonNull ResponseData responseData) {
-                        if (responseData.getStatusCode() != ResponseData.SUCCESS_CODE) {
-                            callBackDeal.fail(responseData.getMessage());
+                        if (responseData.getErrCode() != ResponseData.SUCCESS_CODE) {
+                            callBackDeal.fail(responseData.getErrMessage());
                             return;
                         }
                         callBackDeal.success(responseData);
@@ -71,11 +71,11 @@ public class BbsModel {
 
                     @Override
                     public void onSuccess(@NonNull ResponseData responseData) {
-                        if (responseData.getStatusCode() == ResponseData.SUCCESS_CODE) {
+                        if (responseData.getErrCode() == ResponseData.SUCCESS_CODE) {
                             callBack.success(responseData);
                             return;
                         }
-                        callBack.fail(responseData.getMessage());
+                        callBack.fail(responseData.getErrMessage());
                     }
 
                     @Override
@@ -97,11 +97,11 @@ public class BbsModel {
 
                     @Override
                     public void onSuccess(@NonNull ResponseData responseData) {
-                        if (responseData.getStatusCode() == ResponseData.SUCCESS_CODE) {
+                        if (responseData.getErrCode() == ResponseData.SUCCESS_CODE) {
                             callBack.success(responseData);
                             return;
                         }
-                        callBack.fail(responseData.getMessage());
+                        callBack.fail(responseData.getErrMessage());
                     }
 
                     @Override

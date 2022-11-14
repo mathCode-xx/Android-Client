@@ -1,7 +1,5 @@
 package com.scut.app.net;
 
-import android.util.Log;
-
 import com.scut.app.MyApplication;
 import com.scut.app.entity.ResponseData;
 import com.scut.app.util.NetUtils;
@@ -30,11 +28,11 @@ public class LogServer {
 
                     @Override
                     public void onSuccess(@NonNull ResponseData responseData) {
-                        if (responseData.getStatusCode() == ResponseData.SUCCESS_CODE) {
+                        if (responseData.getErrCode() == ResponseData.SUCCESS_CODE) {
                             callBack.success(responseData);
                             return;
                         }
-                        callBack.fail(responseData.getMessage());
+                        callBack.fail(responseData.getErrMessage());
                     }
 
                     @Override

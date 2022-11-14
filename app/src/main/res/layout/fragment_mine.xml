@@ -331,7 +331,7 @@
                     app:srcCompat="@drawable/ic_log" />
 
                 <TextView
-                    android:id="@+id/textView7"
+                    android:id="@+id/tvLog"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="操作日志"

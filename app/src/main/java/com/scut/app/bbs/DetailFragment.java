@@ -92,7 +92,7 @@ public class DetailFragment extends Fragment {
         binding.btnComment.setOnClickListener(v -> mViewModel.comment(new CallBack() {
             @Override
             public void success(ResponseData responseData) {
-                ToastUtils.show(responseData.getMessage());
+                ToastUtils.show(responseData.getErrMessage());
                 binding.etComment.setText("");
             }
 

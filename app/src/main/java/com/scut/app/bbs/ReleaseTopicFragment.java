@@ -57,7 +57,7 @@ public class ReleaseTopicFragment extends Fragment {
         binding.tvRelease.setOnClickListener(v -> mViewModel.release(new CallBack() {
             @Override
             public void success(ResponseData responseData) {
-                ToastUtils.show(responseData.getMessage());
+                ToastUtils.show(responseData.getErrMessage());
                 Navigation.findNavController(v).popBackStack();
             }
 

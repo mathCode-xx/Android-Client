@@ -36,10 +36,11 @@ public class UserServer {
 
                     @Override
                     public void onSuccess(@NonNull ResponseData responseData) {
-                        if (responseData.getStatusCode() == ResponseData.SUCCESS_CODE) {
+                        if (responseData.getErrCode() == ResponseData.SUCCESS_CODE) {
                             //解析出公钥
                             JSONObject jsonObject = JSONUtil.parseObj(responseData.getData());
-                            String encode = jsonObject.getStr("pubKey");
+                            String encode = jsonObject.getStr("pub");
+                            Log.d(TAG, "onSuccess: " + encode);
                             //对客户端唯一标识进行操作
                             Secret secret = MyApplication.getInstance().getSecret();
                             //加密客户端唯一标识
@@ -70,8 +71,8 @@ public class UserServer {
 
                     @Override
                     public void onSuccess(@NonNull ResponseData responseData) {
-                        if (responseData.getStatusCode() == ResponseData.SUCCESS_CODE) {
-                            ToastUtils.show(responseData.getMessage());
+                        if (responseData.getErrCode() == ResponseData.SUCCESS_CODE) {
+                            ToastUtils.show(responseData.getErrMessage());
                         }
                     }
 
@@ -93,11 +94,11 @@ public class UserServer {
 
                     @Override
                     public void onSuccess(@NonNull ResponseData responseData) {
-                        if (responseData.getStatusCode() == ResponseData.SUCCESS_CODE) {
+                        if (responseData.getErrCode() == ResponseData.SUCCESS_CODE) {
                             callBack.success(responseData);
                             return;
                         }
-                        callBack.fail(responseData.getMessage());
+                        callBack.fail(responseData.getErrMessage());
                     }
 
                     @Override
@@ -120,11 +121,11 @@ public class UserServer {
 
                     @Override
                     public void onSuccess(@NonNull ResponseData responseData) {
-                        if (responseData.getStatusCode() == ResponseData.SUCCESS_CODE) {
+                        if (responseData.getErrCode() == ResponseData.SUCCESS_CODE) {
                             callBack.success(responseData);
                             return;
                         }
-                        callBack.fail(responseData.getMessage());
+                        callBack.fail(responseData.getErrMessage());
                     }
 
                     @Override
@@ -145,11 +146,11 @@ public class UserServer {
 
                     @Override
                     public void onSuccess(@NonNull ResponseData responseData) {
-                        if (responseData.getStatusCode() == ResponseData.SUCCESS_CODE) {
+                        if (responseData.getErrCode() == ResponseData.SUCCESS_CODE) {
                             callBack.success(responseData);
                             return;
                         }
-                        callBack.fail(responseData.getMessage());
+                        callBack.fail(responseData.getErrMessage());
                     }
 
                     @Override
@@ -172,11 +173,11 @@ public class UserServer {
 
                     @Override
                     public void onSuccess(@NonNull ResponseData responseData) {
-                        if (responseData.getStatusCode() == ResponseData.SUCCESS_CODE) {
+                        if (responseData.getErrCode() == ResponseData.SUCCESS_CODE) {
                             callBack.success(responseData);
                             return;
                         }
-                        callBack.fail(responseData.getMessage());
+                        callBack.fail(responseData.getErrMessage());
                     }
 
                     @Override

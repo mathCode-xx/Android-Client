@@ -22,10 +22,10 @@ import retrofit2.http.PUT;
  */
 public interface IUserServer {
 
-    @GET("user/pub")
+    @GET("client/pub")
     Single<ResponseData> requirePubKey();
 
-    @POST("user/init")
+    @POST("client/secret")
     Single<ResponseData> init(@Body Secret secret);
 
     @POST("user/login")

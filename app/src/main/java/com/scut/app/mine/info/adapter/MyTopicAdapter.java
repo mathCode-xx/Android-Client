@@ -63,7 +63,7 @@ public class MyTopicAdapter extends RecyclerView.Adapter<MyTopicAdapter.MyTopicV
                         if (dialog.isShowing()) {
                             dialog.dismiss();
                         }
-                        ToastUtils.show(responseData.getMessage());
+                        ToastUtils.show(responseData.getErrMessage());
                     }
 
                     @Override

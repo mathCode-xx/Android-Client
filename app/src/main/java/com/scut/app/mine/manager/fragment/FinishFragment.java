@@ -62,7 +62,7 @@ public class FinishFragment extends Fragment {
                 mViewModel.commitRollback(stringList, new CallBack() {
                     @Override
                     public void success(ResponseData responseData) {
-                        ToastUtils.show(responseData.getMessage());
+                        ToastUtils.show(responseData.getErrMessage());
                         adapter.deleteItem();
                         binding.bottomLayout.setVisibility(View.GONE);
                     }

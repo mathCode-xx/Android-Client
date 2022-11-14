@@ -6,11 +6,13 @@ import com.scut.app.MyApplication;
 import com.scut.app.entity.LoginBean;
 import com.scut.app.entity.ResponseData;
 import com.scut.app.entity.User;
+import com.scut.app.key.symmetry.SymmetryKey;
 import com.scut.app.net.IUserServer;
 import com.scut.app.room.database.UserDatabase;
 import com.scut.app.util.NetUtils;
 import com.scut.app.util.SharedPreferenceUtils;
 
+import cn.hutool.core.codec.Base64;
 import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
@@ -38,6 +40,12 @@ public class LoginModel {
     private void request(LoginBean loginBean, ILoginDataCallback iLoginDataCallback) {
         IUserServer iUserServer = NetUtils.createRetrofit(IUserServer.class);
 
+        String password = loginBean.getPassword();
+        Log.d(TAG, "request1: " + password);
+        byte[] encrypt = SymmetryKey.encrypt(password.getBytes());
+        loginBean.setPassword(Base64.encode(encrypt));
+        Log.d(TAG, "request2: " + loginBean.getPassword());
+
         Observable<ResponseData> login = iUserServer.login(loginBean);
         login.subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -49,13 +57,13 @@ public class LoginModel {
 
                     @Override
                     public void onNext(@NonNull ResponseData responseData) {
-                        Log.d(TAG, "onNext: " + responseData.getMessage());
-                        if (responseData.getStatusCode() == ResponseData.SUCCESS_CODE) {
+                        Log.d(TAG, "onNext: " + responseData.getErrMessage());
+                        if (responseData.getErrCode() == ResponseData.SUCCESS_CODE) {
                             saveData(loginBean, responseData, iLoginDataCallback);
                             iLoginDataCallback.success();
                             return;
                         }
-                        iLoginDataCallback.fail(responseData.getMessage());
+                        iLoginDataCallback.fail(responseData.getErrMessage());
                     }
 
                     @Override
@@ -139,9 +147,9 @@ public class LoginModel {
 
                     @Override
                     public void onNext(@NonNull ResponseData responseData) {
-                        Log.d(TAG, "onNext: " + responseData.getStatusCode());
-                        if (responseData.getStatusCode() != ResponseData.SUCCESS_CODE) {
-                            callBackRegister.fail(responseData.getMessage());
+                        Log.d(TAG, "onNext: " + responseData.getErrCode());
+                        if (responseData.getErrCode() != ResponseData.SUCCESS_CODE) {
+                            callBackRegister.fail(responseData.getErrMessage());
                             return;
                         }
                         callBackRegister.success(responseData);

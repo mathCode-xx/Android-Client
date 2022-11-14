@@ -134,7 +134,9 @@ public class MineFragment extends Fragment {
             //普通管理员没有查看日志信息的权限，系统管理员可以
             if (permission == User.MANAGER) {
                 binding.ivLog.setVisibility(View.GONE);
+                binding.tvLog.setVisibility(View.GONE);
             } else {
+                binding.tvLog.setVisibility(View.VISIBLE);
                 binding.ivLog.setVisibility(View.VISIBLE);
             }
 
